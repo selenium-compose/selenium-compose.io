@@ -1,0 +1,38 @@
+<footer class="bg-primary-color-dark ph4-ns pt4 relative w-100" role="contentinfo">
+    <div class="center flex-ns flex-wrap justify-between mw9 w-90">
+      <div class="pb3 pt4 w-100">
+         <div class="b f3 light-gray mb3 nested-links tc">
+           By the <a href="https://github.com/selenium-compose/selenium-compose/graphs/contributors" class="link">contributors</a> who care<br />
+          </div>
+
+          <div class="center w4"></div>
+
+          <ul class="center f6 list ma0 mv3 pa0 tc">
+            {{- with .Site.Params.github_repo -}}<li class="dib mr3"><a href="{{ . }}" class="dim link light-gray pv2">File an Issue</a></li>{{- end -}}
+            {{- with .Site.Params.slack -}}<li class="dib mr3"><a href="{{ . }}" class="dim link light-gray pv2">Get Help on Slack</a></li>{{- end -}}
+            {{- with .Site.Params.gitter -}}<li class="dib"><a href="{{ . }}" class="dim link light-gray pv2">Discuss Source Code</a></li>{{- end -}}
+          </ul>
+
+          <ul class="center f6 list ma0 mv3 pa0 tc">
+            <li class="dib mr3"><a href="https://twitter.com/selecniumC" class="dim link light-gray pv2">@seleniumC</a></li>
+            <li class="dib mr3"><a href="https://twitter.com/spf13" class="dim link light-gray pv2">@aramp88</a></li>
+          </ul>
+
+          {{ with  getenv "REPOSITORY_URL" -}}
+          <p class="center f6 tc w-70"><a href="https://www.netlify.com"><img src="https://www.netlify.com/img/global/badges/netlify-dark.svg"/></a></p>
+          {{- end }}
+
+          <div class="center f6 list ma0 mv3 pa0 tc">
+            <p class="light-gray pv2">
+              A huge ❤️for <a href="https://gohugo.io" class="dim link light-gray pv2" target="_blank"><span style="color: #FF4188">H</span><span style="color: #0694CB">U</span><span style="color: #32BA91">G</span><span style="color: #EBB951">O</span>
+              </a>
+            </p>
+          </div>
+      </div>
+    </div>
+
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 w-100">
+      {{- partial "nav-mobile.html" . -}}
+    </div>
+
+</footer>

@@ -1,0 +1,26 @@
+<header class="bg-primary-color-dark ph4 tc" role="banner">
+  <section class="center pb4 pb5-l ph4-l pt3 pt5-ns w-90 w-75-l">
+    <div class="center">
+      <img src="/images/logo-wide.png" />
+    </div>
+    {{ with .Site.Params.description }}
+      <h2 class="f3 f1-l fw4 white-90 m0 lh-title pt2 pb3 pv0-ns">
+        {{ . }}
+      </h2>
+    {{ end }}
+    <!-- GitHub Star -->
+    <iframe src="https://ghbtns.com/github-btn.html?user=selenium-compose&repo=selenium-compose&type=star&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+    <!-- Twitter follow button -->
+    <a href="https://twitter.com/SeleniumC" style="width: 118px" class="twitter-follow-button" data-show-count="true">Follow @SeleniumC</a>
+    <script>
+    window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+    </script>
+
+    <div class="lh-copy f4 w-90-ns center fw2 silver tc tc-ns">
+      {{ .Content }}
+    </div>
+    <div class="w4 mv4 center">
+      <a class="f5 db link grow tc v-mid bg-blue white ba b--blue ph3 pv2 br1" href="/getting-started/quick-start/">Quick Start</a>
+    </div>
+  </section>
+</header>
