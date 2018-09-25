@@ -38,7 +38,8 @@ timeout|Wait until the expected condition has been satisfied|Duration|`false`
 ### Not Empty
 
 Assert the Web Element's attribute at the specified location is not empty.
-{{ % code % }}
+
+{{< highlight yml >}}
 - attr:
     location: .email | $email_input
     selector: css
@@ -46,7 +47,7 @@ Assert the Web Element's attribute at the specified location is not empty.
     not_empty: true
     timeout: 200ms | $attr_is_timeout
     ignore_case: true | false
-{{ % code % }}
+{{< /highlight >}}
 
 ### Is
 
