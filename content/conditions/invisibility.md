@@ -1,19 +1,23 @@
 ---
 title: Invisibility
+description: Assert invisibility of a WebElement(s) in the DOM
+categories: [conditions]
+authors: ["Aram Petrosyan"]
+keywords: [condition,assertion,invisibility]
 menu:
   docs:
     parent: "conditions"
     weight: 10
+draft: false
+toc: true    
 ---
 
-Assert Web Elements invisibility.
+`invisibility` waits for the located WebElement(s) to be ore become invisible until the `timeout` has exceeded.
+By default, it will wait until at least one WebElement at the given location is invisible.
 
-`invisibility` allows to expect invisibility of Web Elements present in the DOM. A Web Element is considered to be invisible if it is not viewable on the page due to its styling or size.
-## Key
+`invisibility` accepts a string or a map of values.
 
-Invisibility goes under `invisibility` key.
-
-## Properties
+## Structure
 
 Name|Description|Type|Required
 ---|---|---|---
@@ -22,9 +26,7 @@ selector|Methods by which to find elements|string|`false`
 count|Count of expected invisible elements|Count|`false`
 timeout|Wait until the expected condition has been satisfied|Duration|`false`
 
-## Usage
 
-`invisibility` accepts a string or a map of values.
 ### Inline
 
 Use inline syntax to assert at least one Web Element invisibility at the given location with the default selector.
