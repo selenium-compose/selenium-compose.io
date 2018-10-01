@@ -12,12 +12,12 @@ draft: false
 toc: true    
 ---
 
-`invisibility` waits for the located WebElement(s) to be ore become invisible until the `timeout` has exceeded.
+`invisibility` waits for the located WebElement(s) to become invisible until the `timeout` has exceeded.
 By default, it will wait until at least one WebElement at the given location is invisible.
 
 `invisibility` accepts a string or a map of values.
 
-## Structure
+## Properties
 
 Name|Description|Type|Required
 ---|---|---|---
@@ -29,7 +29,7 @@ timeout|Wait until the expected condition has been satisfied|Duration|`false`
 
 ### Inline
 
-Use inline syntax to assert at least one Web Element invisibility at the given location with the default selector.
+Use inline syntax to wait until at least one WebElement is invisible at the given location with the default selector.
 ```yaml
 - invisibility: .hash_code
 ```

@@ -37,6 +37,9 @@
   /*margin: 0;*/
 }
 
+.tab-pane code {
+  background: #272822;
+}
 
 .mw-90 {
   max-width:90%;
