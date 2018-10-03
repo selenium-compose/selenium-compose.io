@@ -71,4 +71,4 @@ To see execution log we run the test in `debug` mode
 selenium-compose run google.yml --debug --timeout=20s --state
 ```
 
-<img src="/gif/google.gif"  />
+<script src="https://asciinema.org/a/PjF9mQhi8SqmQwUMK4tO1FgcT.js" data-speed=2 data-autoplay="true" data-loop="true" data-rows=25 id="asciicast-PjF9mQhi8SqmQwUMK4tO1FgcT" async></script>

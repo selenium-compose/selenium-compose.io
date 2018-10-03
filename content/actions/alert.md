@@ -1,41 +1,67 @@
 ---
 title: Alert
+description: Accept or decline the current alert
+categories: [actions]
+authors: ["Aram Petrosyan"]
+keywords: [action,alert]
 menu:
   docs:
     parent: "actions"
     weight: 5
+draft: false
+toc: true    
 ---
 
-Alert waits until an alert appears on the current page to accept or decline.
-## Key
-
-Alert goes under `alert` key.
+Before accepting or declining, `alert` waits until an alert popup has appeared on the current page.
+If one has not appeared after the `timeout` has exceeded the scenario will fail.
 
 ## Properties
 
 Name|Description|Type|Required
 ---|---|---|---
-is|Expect the current alert text is equal to the given string|string|`false`
-contains|Expect the current alert text contains the given string|string|`false`
-starts|Expect the current alert text starts the given string|string|`false`
-ends|Expect the current alert text ends the given string|string|`false`
-matches|Expect the current alert text matches the given pattern|string|`false`
-ignore_case|Perform case-insensitive comparisons if the flag is true|bool|`false`
-timeout||Duration|`false`
 accept|Flag specifying whether accept or decline the current alert|bool|`false`
+timeout|Waiting timeout until an alert has appeared on the current page|[Duration](/duration)|`false`
 
-## Usage
+## Syntax
 
-### Accept
+`alert` accepts a string or a map of values.
 
-Accept the current alert.
+### Inline
+
+Use inline syntax to accept or decline the current alert waiting the default `timeout` until the alert has appeared
+
 ```yaml
-alert: true
+- alert: true | false
 ```
 
-### Decline
+### Mapping
 
-Decline the current alert.
+Use mapping syntax to configure the `timeout`
+
 ```yaml
-alert: false
+- alert:
+    accept: true | false
+    timeout: timeout | $timeout
+```
+
+## Basic Usage
+
+Accept the current alert
+
+```yaml
+- alert: true
+```
+
+Decline the current alert
+
+```yaml
+- alert: false
+```
+
+Change the waiting `timeout`
+
+```yaml
+- alert:
+    accept: true
+    timeout: 15s
 ```

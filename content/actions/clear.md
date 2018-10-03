@@ -1,60 +1,107 @@
 ---
 title: Clear
+description: Clear an input element value
+categories: [actions]
+authors: ["Aram Petrosyan"]
+keywords: [action,clear]
 menu:
   docs:
     parent: "actions"
-    weight: 10
+    weight: 5
+draft: false
+toc: true    
 ---
 
-Clear waits until the element is present in the DOM to clear its value.
+`clear` waits until the WebElement(s) is present in the DOM to clear its value unless `ignore_presence` has been set to `true`.
 
-If found element(s) is a text entry element, `clear` will clear the value. Has no effect on other
-elements. Text entry elements are INPUT and TEXTAREA elements. Note that the events fired by
-this event may not be as you'd expect. In particular, any keyboard or mouse events.
-If you want to ensure keyboard events are fired, consider using something like <a href="/docs/type.html">type</a> with the <a href="/docs/type.html#backspace">backspace</a> key.
-## Key
+{{% note %}}
+Skip using `ignore_presence` property unless you really have to. If no WebElement is present the scenario will not fail and continue next steps execution, which may cause confusion in the expected behaviour of the composed scenario or debugging.
+{{% /note %}}
 
-Clear goes under `clear` key.
+If found WebElement(s) is a text entry element, `clear` will clear the value. Has no effect on other
+elements. Text entry elements are INPUT and TEXTAREA elements.
+
+{{% note %}}
+Events fired by this event may not be as you'd expect. In particular, any keyboard or mouse events.
+If you want to ensure keyboard events are fired, consider using something like <a href="/docs/type.html">type</a>
+with the <a href="/docs/type.html#backspace">backspace</a> key.
+{{% /note %}}
 
 ## Properties
 
 Name|Description|Type|Required
 ---|---|---|---
-location|Web element location|string|`true`
-selector|Methods by which to find elements|string|`false`
-resolve|Resolve to the exact element in case of multiple elements found. By default, all found elements selected|string|`false`
-ignorepresence|Clean element's value without expecting its presence|bool|`false`
-timeout|The amount of time to wait until the element is present in the DOM|Duration|`false`
+location|Location of a WebElement(s)|string|`true`
+selector|Selector to locate a WebElement(s) on the DOM|string|`false`
+resolve|Resolve to the exact WebElement in case of multiple found|string|`false`
+ignore_presence|Ignore waiting the WebElement(s) presence|bool|`false`
+timeout|Waiting timeout until the located WebElement(s) is presence in the DOM|[Duration](/duration)|`false`
 
-## Usage
+## Syntax
+
+`clear` accepts a string or a map of values
 
 ### Inline
 
-Use inline syntax to clear all found elements' values at the given location with the default selector.
+Use inline syntax to clear all located input WebElement(s) with default `selector` and `timeout`
+
 ```yaml
-- clear: .email | $email_input
+- clear: <string> | $element_location
 ```
 
 ### Mapping
 
-Use mapping syntax to configure available options listed below for click action.
-#### Simple
+Use mapping syntax to configure all properties.
 
-Provide a Web Element location and selector.
 ```yaml
 - clear:
-    location: .reg | $reg_btn
-    selector: css
+    location: <string> | $element_location
+    selector: css | xpath | id | name | tag | class
+    resolve: first | last
+    ignore_presence: true | false
+    timeout: <timeout> | $timeout
 ```
 
-#### Resolve
+## Basic Usage
 
-Resolve to wanted element.
-Please make sure you are precise on your selection to target only one Web Element,
-otherwise the test will fail in case of multiple elements found.
+Consider the following snippet
+
+```HTML
+<form class="form">
+  <input type="text" class="form-control" name="name" value="" />
+
+  <input type="text" class="form-control" name="email" value="" />
+</form>
+```
+
+Clear the value of located input WebElements using the default `selector` and `timeout`.
+
+```yaml
+- clear: .form input
+```
+
+## Resolver Usage
+
+Clear the first WebElement value
+
 ```yaml
 - clear:
-    location: .reg | $reg_btn
-    resolve: first | last
-    selector: css
+    location: .form input
+    resolve: first
+```
+
+or the last
+
+```yaml
+- clear:
+    location: .form input
+    resolve: last
+```
+
+## Timeout Usage
+
+```yaml
+- clear:
+    location: .form input
+    timeout: 20s
 ```

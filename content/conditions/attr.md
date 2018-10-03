@@ -40,20 +40,20 @@ timeout|Waiting timeout until the expected condition(s) has been satisfied|[Dura
 
 ```yaml
 - attr:
-    location: .element | $element_location
+    location: <string> | $element_location
     selector: css | xpath | id | name | tag | class
-    name: value | $input_value
-    is: some-value | $attr_value
-    starts: some-value | $attr_value_starts
-    ends: some-value | $attr_value_ends
-    contains: some-value | $attr_contains
-    matches: pattern | $attr_pattern
+    name: <string> | $input_value
+    is: <string> | $attr_value
+    starts: <string> | $attr_value_starts
+    ends: <string> | $attr_value_ends
+    contains: <string> | $attr_contains
+    matches: <string> | $attr_pattern
     ignore_case: true | false
     count:
-      is: 3 | $el_num
-      less: 4 | $el_max_num
-      more: 1 : $el_min_num
-    timeout: 500ms | 10s | 3m | $timeout  
+      is: <number> | $el_num
+      less: <number> | $el_max_num
+      more: <number> : $el_min_num
+    timeout: <timeout> | $timeout  
 ```
 
 See usage cases for each property in details.

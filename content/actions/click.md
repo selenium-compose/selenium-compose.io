@@ -1,21 +1,34 @@
 ---
 title: Click
+description: Perform a click on a WebElement or the web page
+categories: [actions]
+authors: ["Aram Petrosyan"]
+keywords: [action,clear]
 menu:
   docs:
     parent: "actions"
-    weight: 15
+    weight: 5
+draft: false
+toc: true    
 ---
 
-Click on a Web Element. There are some preconditions for an element to be clicked.
-The element must be visible and it must have a height and width greater then 0.
+If a WebElement located `click` waits until the WebElement become clickable before performing click unless
+`ignore_clickable` has been set `true`
 
-Before performing click action it waits until the element becomes clickable.
+{{% note %}}
+Skip using `ignore_clickable` property unless you really have to. Each WebElement has to be checked if it is clickable before performing click on it.
 
-Click action is allowed to be performed on one Web Element at a time, thus, if multiple
-elements found and `resolve` is not given, the test fails with error.
-## Key
+If the flag has been set to `true` and the WebElement is not present in the DOM or is not clickable the scenario will fail which may cause confusion in debugging.
+{{% /note %}}
 
-Click goes under `click` key.
+There are some preconditions for an element to be clickable
+
+* The WebElement must be visible
+* It must have a height and width greater then 0.
+
+`click` can be performed on one WebElement at a time to avoid ambiguity, therefore, if multiple WebElements located the scenario will fail unless `resolve` property has been set.
+
+There is no pre-condition to perform a click on the web page.
 
 ## Properties
 
@@ -27,7 +40,7 @@ resolve|Resolver|string|`false`
 button|Mouse left, right or middle button to click.|string|`false`
 hold|Hold down keys or modifier while performing click|string|`false`
 timeout|The amount of time to wait until Web Element becomes clickable|Duration|`false`
-ignoreclickable|Perform click on Web Element without expecting element to be clickable|bool|`false`
+ignore_clickable|Perform click on Web Element without expecting element to be clickable|bool|`false`
 
 ## Usage
 
