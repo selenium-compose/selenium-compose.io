@@ -23,7 +23,7 @@ Name|Description|Type|Required
 ---|---|---|---
 location|Location of a WebElement(s)|string|`true`
 selector|Selector to locate a WebElement(s) on the DOM|string|`false`
-name|The attribute name|string|`true`
+name|The name of the WebElement(s) attribute|string|`true`
 not_empty|Assert the given attribute is not empty|bool|`false`
 is|Assert the given attribute is equal to the expected value|string|`false`
 contains|Assert the given attribute contains the expected value|string|`false`
@@ -34,12 +34,36 @@ ignore_case|Perform case-insensitive comparisons if the flag is true|bool|`false
 count|Expected count of WebElements satisfying given condition(s) |[Count](/count)|`false`
 timeout|Waiting timeout until the expected condition(s) has been satisfied|[Duration](/duration)|`false`
 
+## Syntax
+
+`attr` accepts a map of values.
+
+```yaml
+- attr:
+    location: .element | $element_location
+    selector: css | xpath | id | name | tag | class
+    name: value | $input_value
+    is: some-value | $attr_value
+    starts: some-value | $attr_value_starts
+    ends: some-value | $attr_value_ends
+    contains: some-value | $attr_contains
+    matches: pattern | $attr_pattern
+    ignore_case: true | false
+    count:
+      is: 3 | $el_num
+      less: 4 | $el_max_num
+      more: 1 : $el_min_num
+    timeout: 500ms | 10s | 3m | $timeout  
+```
+
+See usage cases for each property in details.
+
 ## Assertions Usage
 
-By default, each condition expects at least one WebElement satisfies the attribute condition
+By default, each condition expects at least one WebElement satisfying the attribute condition
 unless `count` property has explicitly been set. All comparisons are made in case-sensitive manner unless `ignore_case` has been set to `true`
 
-Let's consider the following input WebElement and assert its `value` attribute
+Consider the following snippet
 
 ```HTML
 <input type="text" class="email" value="" />
@@ -51,8 +75,8 @@ Wait until the `value` attribute of the WebElement is not empty
 
 ```yaml
 - attr:
-    location: .email | $email
-    name: value | $name_value
+    location: .email
+    name: value
 ```
 
 #### Equals
@@ -136,7 +160,7 @@ In out example it looks something like
 
 Wait until the count of the located WebElements satisfying the attribute condition(s) is equal, less or more the expected amount
 
-let's consider the following elements in the DOM
+Consider the following snippet
 
 ```HTML
 <ul class="menu">
@@ -150,6 +174,18 @@ let's consider the following elements in the DOM
 #### Equals
 
 Wait until the count WebElements whose `class` attribute starts with `menu-item` is equal to 4
+
+
+```yaml
+- attr:
+    location: .menu .menu-item
+    name: class
+    ends: current
+    count:
+      is: 4
+```
+
+or just
 
 ```yaml
 - attr:
@@ -180,9 +216,22 @@ is less than 5
 
 ```yaml
 - attr:
-    location: .email | $email_input
-    name: value
-    starts: aram.pet | $user_email_starts
+    location: .menu .menu-item
+    name: class
+    is: menu-item
     count:
-      more: 5
+      less: 5
+```
+
+## Timeout Usage
+
+`timeout` property refers to the amount of time to wait until the given condition(s) gets satisfied otherwise
+scenario will fail with according error. If `timeout` property is not set the default timeout will be used.
+
+```yaml
+- attr:
+    location: .email
+    name: value
+    is: some-email@gmail.com
+    timeout: 20s
 ```
