@@ -32,7 +32,7 @@ timeout|Wait until the expected condition has been satisfied|Duration|`false`
 Use inline syntax if you need to wait until at least one WebElement become invisible using default `selector` and `timeout`
 
 ```yaml
-- invisibility: location | $element_location
+- invisibility: <string> | $element_location
 ```
 
 ### Mapping
@@ -41,18 +41,18 @@ Use mapping syntax to configure all properties
 
 ```yaml
 - invisibility:
-    location: location | $element_location
+    location: <string> | $element_location
     selector: css | xpath | id | name | tag | class
     count:
-      is: 3 | $el_num
-      less: 4 | $el_max_num
-      more: 1 | $el_min_num
-    timeout: 500ms | 10s | 3m | $timeout
+      is: <number> | $el_num
+      less: <number> | $el_max_num
+      more: <number> | $el_min_num
+    timeout: <timeout> | $timeout
 ```
 
 ## Basic usage
 
-Consider the following snippet
+Consider the following snippet  
 
 ```HTML
 <div class='warning-popup' id='#warning-popup'>

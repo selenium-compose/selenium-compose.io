@@ -51,13 +51,3 @@ Use mapping syntax to configure all properties
 ```
 
 ## Basic usage
-
-Consider the following snippet
-
-```HTML
-<div class='login-popup'>
-  ...
-</div>
-```
-
-make sure that the menu all items become invisible

@@ -1,6 +1,6 @@
 ---
 title: Attribute
-description: Assert if the given attribute of an element satisfies the expected condition(s)
+description: Assert the given attribute of a WebElement(s)
 categories: [conditions]
 authors: ["Aram Petrosyan"]
 keywords: [condition,assertion,attribute]
@@ -48,12 +48,12 @@ timeout|Waiting timeout until the expected condition(s) has been satisfied|[Dura
     ends: <string> | $attr_value_ends
     contains: <string> | $attr_contains
     matches: <string> | $attr_pattern
-    ignore_case: true | false
+    ignore_case: <bool>
     count:
       is: <number> | $el_num
       less: <number> | $el_max_num
-      more: <number> : $el_min_num
-    timeout: <timeout> | $timeout  
+      more: <number> | $el_min_num
+    timeout: <timeout> | $timeout
 ```
 
 See usage cases for each property in details.

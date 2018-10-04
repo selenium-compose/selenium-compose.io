@@ -1,17 +1,21 @@
 ---
 title: Text
+description: Assert the content of an WebElement(s)
+categories: [conditions]
+authors: ["Aram Petrosyan"]
+keywords: [condition,assertion,text]
 menu:
   docs:
     parent: "conditions"
-    weight: 20
+    weight: 10
+draft: false
+toc: true    
 ---
 
 Assert a Web Element content or value.
 
-`text` allows to expect Web Elements text, content or value to be equal to the expected value, contain, start, end with the piece of string or match the given pattern. If the element is an input its conditions are being checked against its value otherwise the element content.
-## Key
+`text` waits until the located WebElement(s) content satisfy the expected condition(s)
 
-Text goes under `text` key.
 
 ## Properties
 
@@ -52,7 +56,7 @@ Expect text, content or value of the Web Elements at the specified location is e
     selector: css
     is: Big ba-na-nana ooh na-na-nana | $content
     ignore_case: true | false
-    timeout: 200ms | $timeout
+    timeout: <timeout> | $timeout
 ```
 
 ### Contain
