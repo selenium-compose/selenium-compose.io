@@ -1,15 +1,19 @@
 ---
 title: Url
+description: Assert the current page's url
+categories: [conditions]
+authors: ["Aram Petrosyan"]
+keywords: [condition,assertion,url]
 menu:
   docs:
     parent: "conditions"
-    weight: 30
+    weight: 10
+draft: false
+toc: true    
 ---
 
-Assert the current page's url. All comparision are performed in case-insensitive manner for url.
-## Key
-
-Url goes under `url` key.
+`url` waits until the current page's url satisfy the expected condition(s)
+Unlike all other conditions all `url` comparisons are case-insensitive.
 
 ## Properties
 
@@ -20,68 +24,104 @@ contains|Expect the current page's url to contain the given string'|string|`fals
 starts|Expect the current page's url to start the given string'|string|`false`
 ends|Expect the current page's url to end with the given string'|string|`false`
 matches|Expect the current page's url to end with the given string'|string|`false`
-schema|Expect the current page's url schema is the given string (http or https)'|string|`false`
-ignorecase||bool|`false`
 timeout|Wait until the expected condition has been satisfied|Duration|`false`
 
-## Usage
+## Syntax
+
+`url` accepts a string or a map of values
 
 ### Inline
 
-Use inline syntax to expect the current url contains the piece of string.
+Use inline syntax to assert that the current page's url contains the expected string
+
 ```yaml
-- url: https://selenium-compose.io | $website_url
+- url: <string> | $url_contains
 ```
 
 ### Mapping
 
-Use mapping syntax to configure all available options of `url` described above.
-#### Is
+Use mapping syntax to configure all available properties
 
-Expect the current page's url is equal to the given string.
 ```yaml
-- url:
-    is: https://selenium-compose.io | $is_is
-    timeout: 200ms | $url_is_timeout
-    ignore_case: true | false
+- title:
+    is: <string> | $url_is
+    contains: <string> | $url_contains
+    starts: <string> | $url_starts
+    ends: <string> | $url_ends
+    matches: <string> | $url_pattern
+    ignore_case: <bool>
+    timeout: <timeout> | $timeout
 ```
 
-#### Contain
+## Assertions Usage
 
-Expect the current page's url contains the given string.
+### Equal
+
+Assert the current url is equal to the expected string
+
 ```yaml
-- url:
-    contains: https://selenium-compose.io | $contains_contains
-    timeout: 200ms | $url_contains_timeout
-    ignore_case: true | false
+- title:
+    is: https://selenium-compose.io/ | $url_is
 ```
 
-#### Start
+### Contains
 
-Expect the current page's url starts with the given string.
+Assert the current url contains the expected string
+
 ```yaml
-- url:
-    starts: https://sel | $starts_starts
-    timeout: 200ms | $url_starts_timeout
-    ignore_case: true | false
+- title:
+    contains: selenium-compose | $url_contains
 ```
 
-#### End
+### Start
 
-Expect the current page's url ends with the given string.
+Assert the current url starts with the expected string
+
 ```yaml
-- url:
-    ends: https://selenium-compose.io | $ends_ends
-    timeout: 200ms | $url_ends_timeout
-    ignore_case: true | false
+- title:
+    starts: https://selenium | $url_starts
 ```
 
-#### Match
+### Ends
 
-Expect the current page's url matches with the given pattern.
+Assert the current url ends with the expected string
+
 ```yaml
-- url:
-    pattern: "[a-zA-Z\\/0-8\.:]" | $ends_ends
-    timeout: 200ms | $url_ends_timeout
-    ignore_case: true | false
+- title:
+    ends: -compose.io/ | $url_ends
+```
+
+### Matches
+
+Assert the current url matches the expected pattern
+
+```yaml
+- title:
+    matches: "^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\\.)?([^:\/\n]+)" | $url_pattern
+```
+
+## Mixed Usage
+
+It is also possible to mix `contains` `starts` `ends` `matches` properties so the current url should satisfy all conditions at once
+
+{{% note %}}
+If `is` condition is given all others will be ignored.
+{{% /note %}}
+
+```yaml
+- title:
+    contains: selenium-compose
+    start: https://
+    ends: .io/
+    matches: "^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\\.)?([^:\/\n]+)"
+```
+
+## Timeout Usage
+
+Timeout refers to the maximum amount of time to wait until the expected condition(s) are satisfied
+
+```yaml
+- title:
+    is: https://selenium-compose.io | $url_ends
+    timeout: 300ms
 ```

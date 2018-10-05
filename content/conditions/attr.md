@@ -61,13 +61,8 @@ See usage cases for each property in details.
 ## Assertions Usage
 
 By default, each condition expects at least one WebElement satisfying the attribute condition
-unless `count` property has explicitly been set. All comparisons are made in case-sensitive manner unless `ignore_case` has been set to `true`
-
-Consider the following snippet
-
-```HTML
-<input type="text" class="email" value="" />
-```
+unless `count` property has explicitly been set.
+All comparisons are case-sensitive unless `ignore_case` has been set to `true`
 
 #### Not Empty
 
@@ -159,17 +154,6 @@ In out example it looks something like
 ## Count Usage
 
 Wait until the count of the located WebElements satisfying the attribute condition(s) is equal, less or more the expected amount
-
-Consider the following snippet
-
-```HTML
-<ul class="menu">
-  <li class="menu-item">item 1</li>
-  <li class="menu-item">item 1</li>
-  <li class="menu-item current">item 1</li>
-  <li class="menu-item">item 1</li>
-</ul>
-```
 
 #### Equals
 
