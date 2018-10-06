@@ -12,7 +12,7 @@ draft: false
 toc: true    
 ---
 
-`presence` waits until at least one WebElement is physically present in the DOM at the given location at any state
+`presence` waits until at least one WebElement is physically present in the DOM at the given location at any state.
 
 ## Properties
 
@@ -25,7 +25,7 @@ timeout|Wait until the expected condition has been satisfied|Duration|`false`
 
 ## Syntax
 
-`presence` accepts a string or a map of values.
+`presence` accepts a string or a map of values
 
 ### Inline
 
@@ -43,11 +43,61 @@ Use mapping syntax to configure all properties
 - presence:
     location: location | $element_location
     selector: css | xpath | id | name | tag | class
-    count:
-      is: 3 | $el_num
-      less: 4 | $el_max_num
-      more: 1 | $el_min_num
-    timeout: 500ms | 10s | 3m | $timeout
+    count: <Count>
+    timeout: <timeout> | $timeout
 ```
 
-## Basic usage
+## Basic Usage
+
+Wait until at least one WebElement is present at the given location
+
+```yaml
+- presence: .login-modal
+```
+
+or with the mapping syntax to override the default `selector` and `timeout`
+
+```yaml
+- presence:
+    location: login-modal
+    selector: id
+    timeout: 250ms
+```
+
+## Count Usage
+
+Wait until the count of present WebElement(s) is equal to the expected number
+
+```yaml
+- presence:
+    location: .login-btn
+    count: 3
+```
+
+or less then the expected number
+
+```yaml
+- presence:
+    location: .login-btn
+    count:
+      less: 4
+```
+
+or more!
+
+```yaml
+- presence:
+    location: .login-btn
+    count:
+      more: 2
+```
+
+## Timeout Usage
+
+`timeout` refers to the amount of time to wait until the given condition(s) gets satisfied otherwise scenario will fail with a error. If `timeout` property has not been set the default timeout will be used
+
+```yaml
+- presence:
+    location: .login-modal
+    timeout: 400ms
+```

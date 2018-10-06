@@ -9,7 +9,7 @@ menu:
     parent: "conditions"
     weight: 5
 draft: false
-toc: true    
+toc: true
 ---
 
 `attr` waits for the given attribute of the located WebElement(s) to
@@ -24,7 +24,6 @@ Name|Description|Type|Required
 location|Location of a WebElement(s)|string|`true`
 selector|Selector to locate a WebElement(s) on the DOM|string|`false`
 name|The name of the WebElement(s) attribute|string|`true`
-not_empty|Assert the given attribute is not empty|bool|`false`
 is|Assert the given attribute is equal to the expected value|string|`false`
 contains|Assert the given attribute contains the expected value|string|`false`
 starts|Assert the given attribute starts with the expected value|string|`false`
@@ -49,10 +48,7 @@ timeout|Waiting timeout until the expected condition(s) has been satisfied|[Dura
     contains: <string> | $attr_contains
     matches: <string> | $attr_pattern
     ignore_case: <bool>
-    count:
-      is: <number> | $el_num
-      less: <number> | $el_max_num
-      more: <number> | $el_min_num
+    count: <Count>
     timeout: <timeout> | $timeout
 ```
 
@@ -139,8 +135,6 @@ at the same time
 If `is` condition is given all other conditions will be ignored.
 {{% /note %}}
 
-In out example it looks something like
-
 ```yaml
 - attr:
     location: .email
@@ -153,23 +147,7 @@ In out example it looks something like
 
 ## Count Usage
 
-Wait until the count of the located WebElements satisfying the attribute condition(s) is equal, less or more the expected amount
-
-#### Equals
-
-Wait until the count WebElements whose `class` attribute starts with `menu-item` is equal to 4
-
-
-```yaml
-- attr:
-    location: .menu .menu-item
-    name: class
-    ends: current
-    count:
-      is: 4
-```
-
-or just
+Wait until the count of the located WebElements satisfying the attribute condition(s) is equal to the expected number
 
 ```yaml
 - attr:
@@ -179,10 +157,7 @@ or just
     count: 4
 ```
 
-#### Less
-
-Wait until the count of WebElements whose `class` attribute is equal to `menu-item`
-is more than 2
+or less then expected number
 
 ```yaml
 - attr:
@@ -193,10 +168,7 @@ is more than 2
       more: 2
 ```
 
-#### More
-
-Wait until the count of WebElements whose `class` attribute is equal to `menu-item`
-is less than 5
+or more!
 
 ```yaml
 - attr:
@@ -209,8 +181,7 @@ is less than 5
 
 ## Timeout Usage
 
-`timeout` property refers to the amount of time to wait until the given condition(s) gets satisfied otherwise
-scenario will fail with according error. If `timeout` property is not set the default timeout will be used.
+`timeout` refers to the amount of time to wait until the given condition(s) gets satisfied otherwise scenario will fail with a error. If `timeout` property has not been set the default timeout will be used.
 
 ```yaml
 - attr:

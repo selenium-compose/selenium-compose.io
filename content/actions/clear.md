@@ -56,9 +56,9 @@ Use mapping syntax to configure all properties.
 ```yaml
 - clear:
     location: <string> | $element_location
-    selector: css | xpath | id | name | tag | class
-    resolve: first | last
-    ignore_presence: true | false
+    selector: <string>
+    resolve: <string>
+    ignore_presence: <bool>
     timeout: <timeout> | $timeout
 ```
 

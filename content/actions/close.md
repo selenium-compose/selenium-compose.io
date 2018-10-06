@@ -1,19 +1,24 @@
 ---
 title: Close
+description: Find a browser and close it
+categories: [actions]
+authors: ["Aram Petrosyan"]
+keywords: [action,click]
 menu:
   docs:
     parent: "actions"
-    weight: 20
+    weight: 5
+draft: false
+toc: true    
 ---
 
-Find a window using its title, url or index and close. All comparision are made in case-sensitive manner for title and case-insensitive for url.
+Find a window using its title, url or index to close it.
+All comparisons are case-sensitive for `title` and case-insensitive for `url`.
 
-Only one window can be closed at a time, thus, if multiple windows are matched to the provided conditions the test will fail, therefore, try to be more precise in the conditions to target the right window to close.
+{{% note %}}
 
-You can also mix title and url conditions.
-## Key
-
-Close goes under `close` key.
+Only one window can be closed at a time, thus, if multiple windows are matched to the provided conditions the scenario will fail, therefore, be more precise in the conditions to target the right window to close
+{{% /note %}}
 
 ## Properties
 
@@ -21,7 +26,7 @@ Name|Description|Type|Required
 ---|---|---|---
 title|Find window with the provided title condition|object|`false`
 url|Find window with the provided url condition|object|`false`
-index|Find window by index.|int|`false`
+index|Find window by index. The current browser is at `0` index|int|`false`
 
 ## Usage
 

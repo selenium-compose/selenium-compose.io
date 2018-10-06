@@ -36,17 +36,13 @@ menu:
     weight: 5
 
   docs:
-  - name: About
-    identifier: about
-    url: /about
-    weight: 1
   - name: Getting Started
     identifier: getting-started
-    url: /getting-started
+    url: /getting-started/quick-start/
     weight: 2
   - name: Developer Guide
-    identifier: developer-guide
-    url: /developer-guide
+    identifier: guide
+    url: /guide
     weight: 20
   - name: Scenario
     identifier: scenario

@@ -12,7 +12,7 @@ draft: false
 toc: true    
 ---
 
-`invisibility` waits for the located WebElement(s) to become invisible until the `timeout` has exceeded
+`invisibility` waits for the located WebElement(s) to become invisible until the `timeout` has exceeded.
 
 ## Properties
 
@@ -29,7 +29,7 @@ timeout|Wait until the expected condition has been satisfied|Duration|`false`
 
 ### Inline
 
-Use inline syntax if you need to wait until at least one WebElement become invisible using default `selector` and `timeout`
+Use inline syntax if you need to wait until at least one WebElement becomes invisible using default `selector` and `timeout`
 
 ```yaml
 - invisibility: <string> | $element_location
@@ -43,10 +43,7 @@ Use mapping syntax to configure all properties
 - invisibility:
     location: <string> | $element_location
     selector: css | xpath | id | name | tag | class
-    count:
-      is: <number> | $el_num
-      less: <number> | $el_max_num
-      more: <number> | $el_min_num
+    count: <Count>
     timeout: <timeout> | $timeout
 ```
 
@@ -67,7 +64,7 @@ or with the mapping syntax to override the default `selector` and `timeout`
 
 ## Count usage
 
-Assert the count of invisible WebElement(s) is equal to the expected number
+Wait until the count of invisible WebElement(s) is equal to the expected number
 
 ```yaml
 - invisibility:
@@ -95,7 +92,7 @@ or more!
 
 ## Timeout Usage
 
-`timeout` property refers to the amount of time to wait until the WebElement(s) become invisible. If `timeout` property is not set the default timeout will be used.
+`timeout` refers to the amount of time to wait until the given condition(s) gets satisfied otherwise scenario will fail with a error. If `timeout` property has not been set the default timeout will be used
 
 ```yaml
 - invisibility:

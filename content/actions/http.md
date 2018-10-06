@@ -1,15 +1,16 @@
 ---
-title: Http Request
+title: HTTP Request
+description: Make  HTTP requests
+categories: [actions]
+authors: ["Aram Petrosyan"]
+keywords: [action,http]
 menu:
   docs:
     parent: "actions"
-    weight: 25
+    weight: 5
+draft: false
+toc: true    
 ---
-
-Make an HTTP request.
-## Key
-
-HTTP Request goes under `http` key.
 
 ## Properties
 
@@ -18,11 +19,10 @@ Name|Description|Type|Required
 url|HTTP Request url|string|`true`
 method|HTTP Method|string|`false`
 headers|HTTP Request headers|object|`false`
-contenttype|HTTP Request content type|string|`false`
+content_type|HTTP Request content type|string|`false`
 data|HTTP Request data|any|`false`
 
 ## Usage
-
 ### Sample
 
 ```yaml

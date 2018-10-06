@@ -3,7 +3,7 @@ title: Click
 description: Perform a click on a WebElement or the web page
 categories: [actions]
 authors: ["Aram Petrosyan"]
-keywords: [action,clear]
+keywords: [action,click]
 menu:
   docs:
     parent: "actions"

@@ -12,7 +12,7 @@ draft: false
 toc: true    
 ---
 
-`invisibility` waits for the located WebElement(s) to become visible until the `timeout` has exceeded.
+`visibility` waits for the located WebElement(s) to become visible until the `timeout` has exceeded.
 All comparisons are case-sensitive unless `ignore_case` has been set to `true`
 
 ## Properties
@@ -90,7 +90,7 @@ Assert visibility of WebElement(s) whose text, content or value contains the exp
     contains: Petrosyan (Yer
 ```
 
-### Start
+### Starts
 
 Expect visibility of WebElement(s) whose text, content or value starts with the expected string
 
@@ -103,7 +103,7 @@ Expect visibility of WebElement(s) whose text, content or value starts with the 
 
 ```
 
-### End
+### Ends
 
 Assert visibility of Web Elements whose text, content or value ends with the expected string
 
@@ -116,7 +116,7 @@ Assert visibility of Web Elements whose text, content or value ends with the exp
 
 ```
 
-#### Match
+#### Matches
 
 Assert visibility of WebElement(s) whose text, content or value matches the expected pattern
 
@@ -128,7 +128,7 @@ Assert visibility of WebElement(s) whose text, content or value matches the expe
     timeout: 100ms | $timeout
 ```
 
-### Match
+### Mixed
 
 It is also possible to mix `contains` `starts` `ends` `matches` condition
 
