@@ -2,11 +2,9 @@
 title: Conditions
 linktitle: Conditions
 description: A `condition` is a set of `expectation`s with an associated name
-date: 2017-02-01
-publishdate: 2017-02-01
-lastmod: 2017-02-01
+authors: ["Aram Petrosyan"]
 categories: [scenario]
-keywords: [usage,docs]
+keywords: [scenario,import,condition]
 menu:
   docs:
     parent: "scenario"
