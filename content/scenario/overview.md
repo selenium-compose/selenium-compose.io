@@ -1,7 +1,7 @@
 ---
 title: Overview
 linktitle: Overview
-description: A scenario is nothing else than a tests case
+description: A scenario is nothing else than a test case. Each scenario describes a user actions and the expected reaction of the browser.
 categories: [scenario]
 keywords: [scenario]
 menu:
@@ -13,11 +13,10 @@ draft: false
 toc: true
 ---
 
-Each `scenario` describes user actions and expected reactions
+All scenarios are defined inside `scenarios` key inside the entry point file with the following scenario `name` and the `scenario` data
 
-## Definition
+Say we have `selenium.yml` which is he entry point of the program
 
-All scenarios are defined inside `scenarios` key with the following scenario `name` and the `scenario` data
 
 ```yaml
 scenarios:
@@ -32,6 +31,12 @@ scenarios:
   scenario_name_3:
     actions:
       ...
+```
+
+which will be run
+
+```bash
+selenium-compose run selenium.yml
 ```
 
 Each scenario may also contain local [Variables](/scenario/variables/) [Conditions](/scenario/conditions/) [Steps](/scenario/steps/) [https](/scenario/https/) which are available only within the scenario and override the global definitions
@@ -58,9 +63,8 @@ scenarios:
 
 ## Import
 
-To keep it easier and not messy you can split scenarios (aka test cases) into separated files and import them into the entry point to run.
-
-Importee structure has to be the same as the importer structure, e.g. the imported file should contain `scenarios` key following with the scenario name and data
+To keep it easier and isolated you can split scenarios (aka test cases) into separated files and import them into the entry point to run.
+Importee structure has to be the same as the importer, e.g. the imported file should contain `scenarios` key following with the scenario name and data
 
 `selenium.yml`
 

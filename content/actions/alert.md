@@ -7,20 +7,20 @@ keywords: [action,alert]
 menu:
   docs:
     parent: "actions"
-    weight: 5
+    weight: 1
 draft: false
 toc: true    
 ---
 
-Before accepting or declining, `alert` waits until an alert popup has appeared on the current page.
+Before accepting or declining `alert` waits until an alert popup has appeared on the current page.
 If one has not appeared after the `timeout` has exceeded the scenario will fail.
 
 ## Properties
 
 Name|Description|Type|Required
 ---|---|---|---
-accept|Flag specifying whether accept or decline the current alert|bool|`false`
-timeout|Waiting timeout until an alert has appeared on the current page|[Duration](/duration)|`false`
+accept|Flag specifying whether accept or decline the current alert|`bool`|`false`
+timeout|Waiting timeout until an alert has appeared on the current page|`Duration`|`false`
 
 ## Syntax
 
@@ -31,7 +31,7 @@ timeout|Waiting timeout until an alert has appeared on the current page|[Duratio
 Use inline syntax to accept or decline the current alert waiting the default `timeout` until the alert has appeared
 
 ```yaml
-- alert: true | false
+- alert: <bool>
 ```
 
 ### Mapping
@@ -40,8 +40,8 @@ Use mapping syntax to configure the `timeout`
 
 ```yaml
 - alert:
-    accept: true | false
-    timeout: timeout | $timeout
+    accept: <bool>
+    timeout: <Duration>
 ```
 
 ## Basic Usage

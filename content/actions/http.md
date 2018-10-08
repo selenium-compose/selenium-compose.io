@@ -1,6 +1,6 @@
 ---
 title: HTTP Request
-description: Make  HTTP requests
+description: Make an HTTP request
 categories: [actions]
 authors: ["Aram Petrosyan"]
 keywords: [action,http]
@@ -12,41 +12,84 @@ draft: false
 toc: true    
 ---
 
+Sometime you may need to do some cleanup or preparations on the server before a `scenario` execution. `http` provides a simple and easy-to-use way to fulfill this task
+
 ## Properties
 
 Name|Description|Type|Required
 ---|---|---|---
-url|HTTP Request url|string|`true`
-method|HTTP Method|string|`false`
-headers|HTTP Request headers|object|`false`
-content_type|HTTP Request content type|string|`false`
-data|HTTP Request data|any|`false`
+url|HTTP Request url|`string`|`true`
+method|HTTP Method|`string`|`false`
+headers|HTTP Request headers|`map`|`false`
+content_type|HTTP Request content type|`string`|`false`
+data|HTTP Request data|`any`|`false`
 
-## Usage
-### Sample
+## Syntax
+
+`http` accepts a string or a map of values
+
+### Inline
+
+Use inline syntax to make a `json` `POST` request to the given url
 
 ```yaml
-- http:
-    url: https://selenium-compose.io/clear-all | $host/clear
-    method: GET | POST | PUT | DELETE | PATCH | OPTIONS
-    headers:
-      = Authorization: authtoken
-      - Content-Length: 1234
-    data:
-      id: 12345
-
+- http: <string> | $api_url
 ```
 
-### Header
+### Mapping
 
-If header Content-Type is one of json, xml, form or plain it will be replaced by the proper header.
+Use mapping syntax to configure all properties
+
 ```yaml
 - http:
-    url: https://selenium-compose.io/clear-all | $host/clear
-    method: GET | POST | PUT | DELETE | PATCH | OPTIONS
-    headers:
-      - Content-Type: json | xml | form | plain
+    url: <string> | $api_url
+    method: <string>
+    headers: <array>
+    content_type: <string> | $content_type
+```
+
+## Basic Usage
+
+```yaml
+- http: https://app.selenium-compose.io/clear-all
+```
+
+or
+
+```yaml
+- http:
+    url: https://app.selenium-compose.io/user
+    method: DELETE
     data:
       id: 12345
+```
 
+## Headers Usage
+
+Add necessary headers to the request
+
+```yaml
+- http:
+    url: https://selenium-compose.io/user
+    method: DELETE
+    headers:
+      Authorization: authtoken
+      Content-Type: application/json
+    data:
+      id: 12345
+```
+
+## Content Type
+
+If `content_type` has been set one of `plain` `json` `xml` `form` the respective header will be added automatically
+`text/plain` `application/json` `application/xml` `application/x-www-form-urlencoded` and the `data` will be encoded accordingly
+
+```yaml
+- http:
+    url: https://selenium-compose.io/user
+    method: DELETE
+    headers:
+      Authorization: authtoken
+    data:
+      id: 12345
 ```

@@ -1,50 +1,76 @@
 ---
 title: Javascript
+description: Execute a javascript code.
+categories: [actions]
+authors: ["Aram Petrosyan"]
+keywords: [action,javascript]
 menu:
   docs:
     parent: "actions"
-    weight: 30
+    weight: 6
+draft: false
+toc: true
 ---
 
-Execute a javascript.
-## Key
+Javascript execution is only synchronous at this time (to be changed). There are two ways to execute `javascript` code
 
-Javascript goes under `javascript` key.
+* Provide a price of code
+* Provide a file relative or absolute path with `javascript` code inside
 
 ## Properties
 
 Name|Description|Type|Required
 ---|---|---|---
-content|Javascript to execute or js file path|string|`true`
+content|Javascript to execute or `javascript` file path|string|`true`
 args|Arguments to the script|array<any>|`false`
 
-## Usage
+## Syntax
+
+`js` accepts a string or a map of values
 
 ### Inline
 
-Use inline syntax execute javascript synchronously without arguments.
-#### Code
+Use inline syntax to execute javascript synchronously without arguments
 
 ```yaml
-- js: "var elem = document.getElementById('bootstrap'); elem.parentNode.removeChild(elem)" | $js_content
-```
-
-#### File
-
-If provided string is a valid js file, the content of the file will be executed.
-```yaml
-- js: /tmp/googleanalytics_mocker.js | $js_filepath
+- js: <string> | $js_content | $js_filepath
 ```
 
 ### Mapping
 
-Use mapping syntax to configure all Javascript available options.
-If `content` is a valid js file path, the content of the file will be executed.
+Use mapping syntax to pass arguments to the script
+
 ```yaml
 - js:
-    content: "alert(arguments[0])" | /tmp/alert.js | $js_content
+    content: <string> | $js_content | $js_filepath
+    args:
+      - <any> | $arg1
+      - <any> | $arg2
+      - <any> | $arg3
+      ...
+```
+
+## Execute Code Usage
+
+```yaml
+- js: "var elem = document.getElementById('bootstrap'); elem.parentNode.removeChild(elem)"
+```
+
+## Execute File Usage
+
+If provided string is a valid js file, the content of the file will be executed
+
+```yaml
+- js: /tmp/googleanalytics_mocker.js
+```
+
+or with arguments
+
+```yaml
+- js:
+    content: "alert(arguments[0])"
     async: true
     args:
-      - "1234"
+      - "Hello Selenium"
 
 ```

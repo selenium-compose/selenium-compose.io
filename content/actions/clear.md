@@ -7,15 +7,15 @@ keywords: [action,clear]
 menu:
   docs:
     parent: "actions"
-    weight: 5
+    weight: 2
 draft: false
 toc: true    
 ---
 
-`clear` waits until the WebElement(s) is present in the DOM to clear its value unless `ignore_presence` has been set to `true`.
+`clear` waits until at least one WebElement is present in the DOM to clear its value unless `ignore_presence` has been set to `true`.
 
 {{% note %}}
-Skip using `ignore_presence` property unless you really have to. If no WebElement is present the scenario will not fail and continue next steps execution, which may cause confusion in the expected behaviour of the composed scenario or debugging.
+Avoid using `ignore_presence` property unless you really have to. If no WebElement is present the scenario will not fail and continue next steps execution, which may cause confusion in the expected behaviour of the composed scenario.
 {{% /note %}}
 
 If found WebElement(s) is a text entry element, `clear` will clear the value. Has no effect on other
@@ -31,11 +31,11 @@ with the <a href="/docs/type.html#backspace">backspace</a> key.
 
 Name|Description|Type|Required
 ---|---|---|---
-location|Location of a WebElement(s)|string|`true`
-selector|Selector to locate a WebElement(s) on the DOM|string|`false`
-resolve|Resolve to the exact WebElement in case of multiple found|string|`false`
-ignore_presence|Ignore waiting the WebElement(s) presence|bool|`false`
-timeout|Waiting timeout until the located WebElement(s) is presence in the DOM|[Duration](/duration)|`false`
+location|Location of a WebElement(s)|`string`|`true`
+selector|Selector to locate a WebElement(s) on the DOM|`string`|`false`
+resolve|Resolve to the exact WebElement in case of multiple found|`string`|`false`
+ignore_presence|Ignore waiting the WebElement(s) presence|`bool`|`false`
+timeout|Waiting timeout until the located WebElement(s) is presence in the DOM|`Duration`|`false`
 
 ## Syntax
 
@@ -59,7 +59,7 @@ Use mapping syntax to configure all properties.
     selector: <string>
     resolve: <string>
     ignore_presence: <bool>
-    timeout: <timeout> | $timeout
+    timeout: <Duration> | $timeout
 ```
 
 ## Basic Usage
@@ -99,6 +99,8 @@ or the last
 ```
 
 ## Timeout Usage
+
+Set waiting `timeout` until at least one WebElement is present at the given location
 
 ```yaml
 - clear:

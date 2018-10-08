@@ -1,6 +1,7 @@
 ---
 title: Sessions
 linktitle: Sessions
+description: "`actions` of each scenario are run against a browser aka session. Once a scenario has begun execution a new, default `main` session gets create against which all `step`s are executed"
 date: 2017-02-01
 publishdate: 2017-02-01
 lastmod: 2017-02-01
@@ -15,11 +16,8 @@ draft: false
 toc: true
 ---
 
-Each `action` is being run on its session. Once a scenario is being executed a new, default `main` session gets create. By default all `step`s are executed in `main` session.
-
-In some cases you may need to create another session and execute some of `actions` or `steps` in different session.
-
-Every `step` has `session` property to specify against which session the `action` or `step` should be executed. If the session has not been created yet it gets created.
+In some cases you may need to create multiple sessions and execute some of `step`s in different session.
+Every `step` has `session` property to specify against which session the `step`s should be executed.
 
 ```yaml
 steps:
