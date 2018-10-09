@@ -1,44 +1,68 @@
 ---
-title: Moveto Documentation
+title: Move To
+description: Move the mouse to relative coordinates from center of element
+categories: [actions]
+authors: ["Aram Petrosyan"]
+keywords: [action,move to]
+menu:
+  docs:
+    parent: "actions"
+    weight: 9
+draft: false
+toc: true    
 ---
 
-Move the mouse to relative coordinates from center of element, If the element is not visible, it will be scrolled into view.
-
- `move_to`  can be performed only on one element at a time, thus, be more precise in your selection to target the right element or use resolve to specify to which found element resolve.
-## Key
-
-MoveTo goes under `moveto` key.
+If the element is not visible, it will be scrolled into view. `move_to` can be performed only on one element at a time, thus, be more precise in your selection to target the right element or use resolve to specify to which found element resolve. If `x` and `y` not given the mouse will be moved to the center coordinates of the WebElement
 
 ## Properties
 
 Name|Description|Type|Required
 ---|---|---|---
-location|Web element location|string|`true`
-selector|Methods by which to find elements|string|`false`
-resolve|Resolver|string|`false`
-x|The relative X coordinate from the center of element|int|`false`
-y|The relative Y coordinate from the center of element|int|`false`
+location|Web element location|`string`|`true`
+selector|Methods by which to find elements|`string`|`false`
+resolve|Resolver|`string`|`false`
+x|The relative X coordinate from the center of a WebElement|`int`|`false`
+y|The relative Y coordinate from the center of element|`int`|`false`
 
-## Usage
+## Syntax
+
+`move_to` accepts a string or a map of values
 
 ### Inline
 
-Use inline syntax to move to element using provided location and default selector.
+Use inline syntax to move to element using provided location and default selector
+
 ```yaml
-- move_to: .box | $box
+- move_to: <string> | $element_location
 ```
 
 ### Mapping
 
-Use mapping syntax to configure available options listed below.
-#### Simple
+Use mapping syntax to configure all properties
 
-provide element location and selector.
 ```yaml
 - move_to:
-    location: .box | $box
-    selector: css
+    location: <string> | $element_location
+    selector: <string>
+    resolver: <string>
+    x: <int>
+    y: <int>
+```
 
+## Basic Usage
+
+Move to the center of a WebElement
+
+```yaml
+- move_to: .reg_btn
+```
+
+or
+
+```yaml
+- move_to:
+    location: .reg_btn
+    selector: css
 ```
 
 #### Coordinates

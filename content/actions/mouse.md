@@ -1,20 +1,25 @@
 ---
 title: Mouse
+description: Hold down or release mouse left button
+categories: [actions]
+authors: ["Aram Petrosyan"]
+keywords: [action,key up, key down]
+menu:
+  docs:
+    parent: "actions"
+    weight: 9
+draft: false
+toc: true    
 ---
 
-Hold down or release mouse left button.
-## Usage
+Causes the left mouse button to be held down
 
-### Down
-
-Causes the left mouse button to be held down.
 ```yaml
 - mouse: down
 ```
 
-### Up
+Causes the left mouse button to be released
 
-Causes the left mouse button to be released.
 ```yaml
 - mouse: up
 ```
