@@ -17,10 +17,12 @@ menu:
     identifier: api-reference
     url: /scenario/overview/
     weight: 3
-  - name: Community
-    weight: 4
-  - name: Contribution
-    weight: 5
+  # - name: Community
+  #   weight: 4
+  #   url: /community
+  # - name: Contribution
+  #   url: /contribution
+  #   weight: 5
 
   docs:
   - name: Getting Started
