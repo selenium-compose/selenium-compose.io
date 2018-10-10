@@ -1,12 +1,12 @@
 ---
 title: Attribute
 description: Assert the given attribute of a WebElement(s)
-categories: [conditions]
+categories: [expectations]
 authors: ["Aram Petrosyan"]
-keywords: [condition,assertion,attribute]
+keywords: [expectations,assertion,attribute]
 menu:
   docs:
-    parent: "conditions"
+    parent: "expectations"
     weight: 5
 draft: false
 toc: true

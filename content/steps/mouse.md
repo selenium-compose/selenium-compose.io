@@ -1,12 +1,12 @@
 ---
 title: Mouse
 description: Hold down or release mouse left button
-categories: [actions]
+categories: [steps]
 authors: ["Aram Petrosyan"]
-keywords: [action,key up, key down]
+keywords: [steps,key up, key down]
 menu:
   docs:
-    parent: "actions"
+    parent: "steps"
     weight: 9
 draft: false
 toc: true    

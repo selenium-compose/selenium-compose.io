@@ -1,13 +1,13 @@
 ---
-title: Screen Shot
+title: Capture
 description: Capture a screenshot of the browser window
-categories: [actions]
+categories: [steps]
 authors: ["Aram Petrosyan"]
-keywords: [action,resize]
+keywords: [steps,capture]
 menu:
   docs:
-    parent: "actions"
-    weight: 13
+    parent: "steps"
+    weight: 2
 draft: false
 toc: true    
 ---
@@ -21,14 +21,14 @@ path|Path to save the screen shot|`string`|`false`
 
 ## Syntax
 
-`scr` accepts a string or a map of values
+`capture` accepts a string or a map of values
 
 ### Inline
 
 Use inline syntax to simply capture a screenshot and save it in output dir, which, is configured with `--outdir` flag
 
 ```yaml
-- scr: <string> | $capture_name
+- capture: <string> | $capture_name
 ```
 
 ### Mapping
@@ -40,7 +40,7 @@ The path should be relative to the current working dir, which is configured with
 {{% /note %}}
 
 ```yaml
-- scr:
+- capture:
     name: <string> | $name
     path: <string> | $images_path
 ```
@@ -48,20 +48,22 @@ The path should be relative to the current working dir, which is configured with
 ## Basic Usage
 
 ```yaml
-- scr: registration-step1
+- capture: registration-step1
 ```
 
 or
 
 ```yaml
-- scr:
+- capture:
     name: registration-step1
 ```
 
-or with custom path!
+## Custom path
+
+Save in a custom path
 
 ```yaml
-- scr:
+- capture:
     name: registration-step1
     path: /images
 ```

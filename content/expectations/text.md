@@ -1,12 +1,12 @@
 ---
 title: Text
 description: Assert the content or the value of a WebElement(s)
-categories: [conditions]
+categories: [expectations]
 authors: ["Aram Petrosyan"]
-keywords: [condition,assertion,text]
+keywords: [expectations,assertion,text]
 menu:
   docs:
-    parent: "conditions"
+    parent: "expectations"
     weight: 10
 draft: false
 toc: true    
@@ -20,7 +20,7 @@ If no condition is given `text` will wait until the WebElement value or content 
 
 Name|Description|Type|Required
 ---|---|---|---
-location|Web element location|string|`false`
+location|Web Element location|string|`false`
 selector|Methods by which to find elements|string|`false`
 is|Assert content or value of the located WebElement(s) is equal to the expected string|string|`false`
 contains|Assert content or value of the located WebElement(s) contains the expected string|string|`false`

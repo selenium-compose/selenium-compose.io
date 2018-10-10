@@ -1,13 +1,13 @@
 ---
 title: Pause
 description: Pauses the current test execution the given amount of time
-categories: [actions]
+categories: [steps]
 authors: ["Aram Petrosyan"]
-keywords: [action,Pause]
+keywords: [steps,pause]
 menu:
   docs:
-    parent: "actions"
-    weight: 11
+    parent: "steps"
+    weight: 14
 draft: false
 toc: true
 ---

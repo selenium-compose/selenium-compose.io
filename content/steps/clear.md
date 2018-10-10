@@ -1,13 +1,13 @@
 ---
 title: Clear
 description: Clear an input element value
-categories: [actions]
+categories: [steps]
 authors: ["Aram Petrosyan"]
-keywords: [action,clear]
+keywords: [steps,clear]
 menu:
   docs:
-    parent: "actions"
-    weight: 2
+    parent: "steps"
+    weight: 3
 draft: false
 toc: true    
 ---

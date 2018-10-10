@@ -1,21 +1,30 @@
-title: Type Documentation
 ---
-
-Type into all found elements at the location.
-## Key
-
-Type goes under `type` key.
+title: Type
+description: Type into all located WebElements
+categories: [steps]
+authors: ["Aram Petrosyan"]
+keywords: [steps,navigation]
+menu:
+  docs:
+    parent: "steps"
+    weight: 18
+draft: false
+toc: true
+---
 
 ## Properties
 
 Name|Description|Type|Required
 ---|---|---|---
-location|Web element location|string|`false`
+location|Web Element location|string|`true`
 selector|Methods by which to find elements|string|`false`
 resolve|Resolver|string|`false`
-keys|characters to be typed into element|string|`false`
+timeout|The amount of time to wait until Web Element becomes clickable|`Duration`|`false`
+ignore_presence|Do not wait until the location WebElement is present|`bool`|`false`
 
-## Usage
+## Syntax
+
+`type` accepts a string or a map of values
 
 ### Simple
 

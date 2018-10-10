@@ -1,13 +1,13 @@
 ---
 title: Key Press & Release
 description: "`press` sends a sequence of keystrokes to the active element, `release` indicates that a previous keystroke sent by `press` should be released"
-categories: [actions]
+categories: [steps]
 authors: ["Aram Petrosyan"]
-keywords: [action,key up, key down]
+keywords: [steps,key up, key down]
 menu:
   docs:
-    parent: "actions"
-    weight: 7
+    parent: "steps"
+    weight: 8
 draft: false
 toc: true    
 ---

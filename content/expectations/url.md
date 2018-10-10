@@ -1,12 +1,12 @@
 ---
 title: Url
 description: Assert the current page's url
-categories: [conditions]
+categories: [expectations]
 authors: ["Aram Petrosyan"]
-keywords: [condition,assertion,url]
+keywords: [expectations,assertion,url]
 menu:
   docs:
-    parent: "conditions"
+    parent: "expectations"
     weight: 10
 draft: false
 toc: true    

@@ -1,13 +1,13 @@
 ---
 title: Move To
 description: Move the mouse to relative coordinates from center of element
-categories: [actions]
+categories: [steps]
 authors: ["Aram Petrosyan"]
-keywords: [action,move to]
+keywords: [steps,move_to]
 menu:
   docs:
-    parent: "actions"
-    weight: 9
+    parent: "steps"
+    weight: 11
 draft: false
 toc: true    
 ---
@@ -18,7 +18,7 @@ If the element is not visible, it will be scrolled into view. `move_to` can be p
 
 Name|Description|Type|Required
 ---|---|---|---
-location|Web element location|`string`|`true`
+location|Web Element location|`string`|`true`
 selector|Methods by which to find elements|`string`|`false`
 resolve|Resolver|`string`|`false`
 x|The relative X coordinate from the center of a WebElement|`int`|`false`
@@ -65,7 +65,7 @@ or
     selector: css
 ```
 
-#### Coordinates
+## Coordinates
 
 provide X, Y coordinates relative to the center of element.
 ```yaml
@@ -77,7 +77,7 @@ provide X, Y coordinates relative to the center of element.
 
 ```
 
-#### Resolve
+## Resolve
 
 specify to which element resolve in case of multiple elements found.
 ```yaml

@@ -1,12 +1,12 @@
 ---
 title: Alert
 description: Accept or decline the current alert
-categories: [actions]
+categories: [steps]
 authors: ["Aram Petrosyan"]
-keywords: [action,alert]
+keywords: [steps,alert]
 menu:
   docs:
-    parent: "actions"
+    parent: "steps"
     weight: 1
 draft: false
 toc: true    

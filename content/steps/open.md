@@ -1,13 +1,13 @@
 ---
 title: Open
 description: Load a new web page in the current browser window
-categories: [actions]
+categories: [steps]
 authors: ["Aram Petrosyan"]
-keywords: [action,navigation]
+keywords: [steps,open]
 menu:
   docs:
-    parent: "actions"
-    weight: 11
+    parent: "steps"
+    weight: 13
 draft: false
 toc: true
 ---

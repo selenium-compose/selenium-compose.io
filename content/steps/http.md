@@ -1,13 +1,13 @@
 ---
 title: HTTP Request
 description: Make an HTTP request
-categories: [actions]
+categories: [steps]
 authors: ["Aram Petrosyan"]
-keywords: [action,http]
+keywords: [steps,http]
 menu:
   docs:
-    parent: "actions"
-    weight: 5
+    parent: "steps"
+    weight: 6
 draft: false
 toc: true    
 ---

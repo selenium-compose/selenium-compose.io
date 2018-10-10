@@ -1,21 +1,21 @@
 ---
-title: Close
-description: Lookup for a browser and close it
-categories: [actions]
+title: Switch
+description: Lookup for a browser and switch to it
+categories: [steps]
 authors: ["Aram Petrosyan"]
-keywords: [action,close]
+keywords: [steps,switch]
 menu:
   docs:
-    parent: "actions"
-    weight: 4
+    parent: "steps"
+    weight: 17
 draft: false
 toc: true    
 ---
 
-`close` waits until a browser has been matched to close it. All comparisons are case-sensitive for `title` and case-insensitive for `url`.
+`switch` waits until a browser has been matched to switch to it. All comparisons are case-sensitive for `title` and case-insensitive for `url`.
 
 {{% note %}}
-Only one window can be closed at a time, thus, if multiple windows are matched to the provided conditions the scenario will fail, therefore, be more precise in the conditions to target the right window to close
+Only one window can be switched at a time, thus, if multiple windows are matched to the provided conditions the scenario will fail, therefore, be more precise in the conditions to target the right window to switch
 {{% /note %}}
 
 There are 3 ways to match a browser
@@ -53,7 +53,7 @@ You can mix `title` and `url` to match the right browser.
 {{% /note %}}
 
 ```yaml
-- close:
+- switch:
     title:
       is: <string> | $title_is
       contains: <string> | $title_contains
@@ -69,127 +69,127 @@ You can mix `title` and `url` to match the right browser.
     index: <integer>  
 ```
 
-## Close by Title lookup
+## Switch by Title lookup
 
-Find window using its `title` to close. All comparisons are case-sensitive
+Find window using its `title` to switch to it. All comparisons are case-sensitive
 
 #### Inline
 
-Close window whose `title` contains the expected string
+Switch window whose `title` contains the expected string
 
 ```yaml
-- close:
+- switch:
     title: selenium compose
 ```
 
 #### Is
 
-Close window whose `title` is equal to the expected string
+Switch window whose `title` is equal to the expected string
 
 ```yaml
-- close:
+- switch:
     title:
       is: selenium compose is awesome! | $title_is
 ```
 
 #### Contains
 
-Close window whose `title` contains expected string
+Switch window whose `title` contains expected string
 
 ```yaml
-- close:
+- switch:
     title:
       contains: selenium compose | $title_contains
 ```
 
 #### Starts
 
-Close window whose `title` starts with the expected string
+Switch window whose `title` starts with the expected string
 
 ```yaml
-- close:
+- switch:
     title:
       starts: selenium | $title_starts
 ```
 
 #### Ends
 
-Close window whose `title` ends with the expected string
+Switch window whose `title` ends with the expected string
 
 ```yaml
-- close:
+- switch:
     title:
       ends: awesome! | $title_ends
 ```
 
 #### Matches
 
-Close window whose `title` matches the expected string
+Switch window whose `title` matches the expected string
 
 ```yaml
-- close:
+- switch:
     title:
       ends: awesome! | $title_matches
 ```
 
-## Close by URL lookup
+## Switch by URL lookup
 
-Find window using its `url` to close. All comparisons are case-insensitive.
+Find window using its `url` to switch. All comparisons are case-insensitive.
 
 #### Inline
 
-Close window whose `url` contains the expected string
+Switch window whose `url` contains the expected string
 
 ```yaml
-- close:
+- switch:
     url: selenium-compose.io
 ```
 
 #### Is
 
-Close window whose `url` is equal to the provided string.
+Switch window whose `url` is equal to the provided string.
 ```yaml
-- close:
+- switch:
     url:
       is: https://selenium-compose.io/
 ```
 
 #### Contains
 
-Close window whose `url` contains expected string
+Switch window whose `url` contains expected string
 
 ```yaml
-- close:
+- switch:
     url:
       contains: selenium-compose | $url_contains
 ```
 
 #### Starts
 
-Close window whose `url` starts with the expected string
+Switch window whose `url` starts with the expected string
 
 ```yaml
-- close:
+- switch:
     url:
       starts: https://selenium | $url_starts
 ```
 
 #### Ends
 
-Close window whose `url` ends with the expected string
+Switch window whose `url` ends with the expected string
 
 ```yaml
-- close:
+- switch:
     url:
       ends: compose.io | $url_ends
 ```
 
 #### Matches
 
-Close window whose url matches the expected string
+Switch window whose url matches the expected string
 
 ```yaml
-- close:
+- switch:
     url:
       matches: "https?:\/\/(www\.)?[-a-zA-Z0-9@:%!!(MISSING)!(MISSING)_(MISSING)\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%!!(MISSING)!(MISSING)_(MISSING)\+.~#?&//=]*)" | $url_matches
 ```
@@ -200,7 +200,7 @@ Browser `index` starts counting from 0 which is the main browser. Each next open
 If you are unsure about window `index`, please use use `url` and `title` conditions.
 
 ```yaml
-- close: 3
+- switch: 3
 ```
 
 ## Title and URL mixed
@@ -208,7 +208,7 @@ If you are unsure about window `index`, please use use `url` and `title` conditi
 You can mix url and title conditions
 
 ```yaml
-- close:
+- switch:
     title:
       contains: selenium compose | $title_contains
     url:

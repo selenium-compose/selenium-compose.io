@@ -1,12 +1,12 @@
 ---
 title: Presence
 description: Assert presence of a WebElement(s) in the DOM
-categories: [conditions]
+categories: [expectations]
 authors: ["Aram Petrosyan"]
-keywords: [condition,assertion,presence]
+keywords: [expectations,assertion,presence]
 menu:
   docs:
-    parent: "conditions"
+    parent: "expectations"
     weight: 10
 draft: false
 toc: true    
@@ -18,7 +18,7 @@ toc: true
 
 Name|Description|Type|Required
 ---|---|---|---
-location|Web element location|string|`true`
+location|Web Element location|string|`true`
 selector|Methods by which to find elements|string|`false`
 count|Count of expected invisible elements|Count|`false`
 timeout|Wait until the expected condition has been satisfied|Duration|`false`

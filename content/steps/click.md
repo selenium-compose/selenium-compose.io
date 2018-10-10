@@ -1,13 +1,13 @@
 ---
 title: Click
 description: Perform a click on a WebElement or the web page
-categories: [actions]
+categories: [steps]
 authors: ["Aram Petrosyan"]
-keywords: [action,click]
+keywords: [steps,click]
 menu:
   docs:
-    parent: "actions"
-    weight: 3
+    parent: "steps"
+    weight: 4
 draft: false
 toc: true    
 ---
@@ -18,7 +18,7 @@ If a WebElement location is given `click` waits until the WebElement become clic
 {{% note %}}
 Avoid using `ignore_clickable` property unless you really have to. Each WebElement has to be checked if it is clickable before performing click on it.
 
-If the flag has been set to `true` and the WebElement is not present in the DOM or is not clickable the scenario will fail which may cause confusion in debugging.
+If the flag has been set to `true` and the WebElement is not present in the DOM or is not clickable the scenario will fail which may cause confusion.
 {{% /note %}}
 
 There are some preconditions for an element to be clickable
@@ -34,7 +34,7 @@ If the location is not given or its value is `document` a click is performed on 
 
 Name|Description|Type|Required
 ---|---|---|---
-location|Web element location|`string`|`false`
+location|Web Element location|`string`|`false`
 selector|Methods by which to find elements|`string`|`false`
 resolve|Resolver|`string`|`false`
 button|Mouse left, right or middle button to click|`string`|`false`

@@ -1,13 +1,13 @@
 ---
 title: Javascript
 description: Execute a javascript code.
-categories: [actions]
+categories: [steps]
 authors: ["Aram Petrosyan"]
-keywords: [action,javascript]
+keywords: [steps,javascript]
 menu:
   docs:
-    parent: "actions"
-    weight: 6
+    parent: "steps"
+    weight: 7
 draft: false
 toc: true
 ---

@@ -1,12 +1,12 @@
 ---
 title: Visibility
 description: Assert visibility of a WebElement(s)
-categories: [conditions]
+categories: [expectations]
 authors: ["Aram Petrosyan"]
-keywords: [condition,assertion,visibility]
+keywords: [expectations,assertion,visibility]
 menu:
   docs:
-    parent: "conditions"
+    parent: "expectations"
     weight: 10
 draft: false
 toc: true    
@@ -19,7 +19,7 @@ All comparisons are case-sensitive unless `ignore_case` has been set to `true`
 
 Name|Description|Type|Required
 ---|---|---|---
-location|Web element location|string|`true`
+location|Web Element location|string|`true`
 selector|Methods by which to find elements|string|`false`
 is|Expect the WebElement(s) visibility whose content or value is equal to the given string|string|`false`
 contains|Expect the WebElement(s) visibility whose content or value contains the given string|string|`false`

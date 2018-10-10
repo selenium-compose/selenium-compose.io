@@ -1,12 +1,12 @@
 ---
 title: Title
 description: Assert the current page's title
-categories: [conditions]
+categories: [expectations]
 authors: ["Aram Petrosyan"]
-keywords: [condition,assertion,title]
+keywords: [expectations,assertion,title]
 menu:
   docs:
-    parent: "conditions"
+    parent: "expectations"
     weight: 10
 draft: false
 toc: true    

@@ -6,6 +6,7 @@ params:
   github_repo: https://github.com/selenium-compose/selenium-compose/issues/new
   slack: https://join.slack.com/t/seleniumcompose/shared_invite/enQtMzYwMzI2MTQ2Njc4LTQ2MDFmMjBhYTllNDdhNjc5NDM3ZGUzNmZiMDZkOGM1NDcxMTdjYWM4OWMxMmRiYThlZWQ1NTVkOGE0NDVkMWY
   gitter: https://gitter.im/SelenumC/Lobby
+  ghrepo: https://github.com/selenium-compose/selenium-compose.io/
 
 menu:
   global:
@@ -13,16 +14,18 @@ menu:
     identifier: getting-started
     url: /getting-started/quick-start/
     weight: 1
-  - name: API Reference
-    identifier: api-reference
+  - name: Docs
+    identifier: docs
     url: /scenario/overview/
+    weight: 2
+  - name: Community
+    url: /community
+    identifier: community
     weight: 3
-  # - name: Community
-  #   weight: 4
-  #   url: /community
-  # - name: Contribution
-  #   url: /contribution
-  #   weight: 5
+  - name: Contribute
+    url: /contribute
+    identifier: contribute
+    weight: 4
 
   docs:
   - name: Getting Started
@@ -33,11 +36,11 @@ menu:
     identifier: scenario
     url: /scenario
     weight: 25
-  - name: Actions
-    identifier: actions
-    url: /actions
+  - name: Steps
+    identifier: steps
+    url: /steps
     weight: 30
-  - name: Conditions
-    identifier: conditions
-    url: /conditions
+  - name: Expectations
+    identifier: expectations
+    url: /expectations
     weight: 35

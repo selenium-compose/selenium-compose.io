@@ -1,12 +1,12 @@
 ---
 title: Invisibility
 description: Assert invisibility of a WebElement(s)
-categories: [conditions]
+categories: [expectations]
 authors: ["Aram Petrosyan"]
-keywords: [condition,assertion,invisibility]
+keywords: [expectations,assertion,invisibility]
 menu:
   docs:
-    parent: "conditions"
+    parent: "expectations"
     weight: 10
 draft: false
 toc: true    
@@ -18,7 +18,7 @@ toc: true
 
 Name|Description|Type|Required
 ---|---|---|---
-location|Web element location|string|`true`
+location|Web Element location|string|`true`
 selector|Methods by which to find WebElements|string|`false`
 count|Count of expected invisible WebElements|Count|`false`
 timeout|Wait until the expected condition has been satisfied|Duration|`false`
