@@ -1202,7 +1202,7 @@ module.exports = E;
             value: function isSupported() {
                 var action = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : ['copy', 'cut'];
 
-                var actions = typeof action === 'string' ? [action] : action;
+                var actions = typeof action === 'string' ? [step] : action;
                 var support = !!document.queryCommandSupported;
 
                 actions.forEach(function (action) {
@@ -1306,7 +1306,7 @@ module.exports = E;
 			addRemoveLoadEvents(dom, fn);
 		}
 		loadEvents.forEach(function(evt){
-			dom[action](evt, fn);
+			dom[step](evt, fn);
 		});
 	};
 
