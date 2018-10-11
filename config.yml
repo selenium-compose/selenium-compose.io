@@ -1,22 +1,12 @@
 baseURL: https://selenium-compose.io
 title: Selenium Compose
 
-features:
-  - heading: Codeless
-    image_path: /logo.svg
-    tagline: tag
-    copy: bla bla
-
-  - heading: Codeless
-    image_path: /logo.svg
-    tagline: tag
-    copy: bla bla
-
 params:
   description: Description-driven selenium tests composition
   github_repo: https://github.com/selenium-compose/selenium-compose/issues/new
   slack: https://join.slack.com/t/seleniumcompose/shared_invite/enQtMzYwMzI2MTQ2Njc4LTQ2MDFmMjBhYTllNDdhNjc5NDM3ZGUzNmZiMDZkOGM1NDcxMTdjYWM4OWMxMmRiYThlZWQ1NTVkOGE0NDVkMWY
   gitter: https://gitter.im/SelenumC/Lobby
+  ghrepo: https://github.com/selenium-compose/selenium-compose.io/
 
 menu:
   global:
@@ -24,39 +14,33 @@ menu:
     identifier: getting-started
     url: /getting-started/quick-start/
     weight: 1
-  - name: Developer Guide
+  - name: Docs
+    identifier: docs
+    url: /scenario/overview/
     weight: 2
-  - name: API Reference
-    identifier: api-reference
-    url: /api/
-    weight: 3
   - name: Community
+    url: /community
+    identifier: community
+    weight: 3
+  - name: Contribute
+    url: /contribute
+    identifier: contribute
     weight: 4
-  - name: Contribution
-    weight: 5
 
   docs:
-  - name: About
-    identifier: about
-    url: /about
-    weight: 1
   - name: Getting Started
     identifier: getting-started
-    url: /getting-started
+    url: /getting-started/quick-start/
     weight: 2
-  - name: Developer Guide
-    identifier: developer-guide
-    url: /developer-guide
-    weight: 20
   - name: Scenario
     identifier: scenario
     url: /scenario
     weight: 25
-  - name: Actions
-    identifier: actions
-    url: /actions
+  - name: Steps
+    identifier: steps
+    url: /steps
     weight: 30
-  - name: Conditions
-    identifier: conditions
-    url: /conditions
+  - name: Expectations
+    identifier: expectations
+    url: /expectations
     weight: 35

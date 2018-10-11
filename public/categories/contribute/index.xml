@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contribute on Selenium Compose</title>
+    <link>http://localhost:1313/categories/contribute/</link>
+    <description>Recent content in Contribute on Selenium Compose</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="http://localhost:1313/categories/contribute/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Contribute</title>
+      <link>http://localhost:1313/contribute/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/contribute/</guid>
+      <description> You can help to make lives easier! a few things you can do:
+Features  Add new features to Selenium Compose  Documentation  Make Selenium Compose&amp;rsquo;s documentation better by writing new content, correcting existing material  Fixing or reporting bugs  If you found any bug file an issue  </description>
+    </item>
+    
+  </channel>
+</rss>

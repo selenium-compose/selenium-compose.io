@@ -10,20 +10,56 @@
     
     
     <item>
-      <title>Conditions</title>
-      <link>http://localhost:1313/categories/conditions/</link>
+      <title>Community</title>
+      <link>http://localhost:1313/categories/community/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/conditions/</guid>
+      <guid>http://localhost:1313/categories/community/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contribute</title>
+      <link>http://localhost:1313/categories/contribute/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/contribute/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Expectations</title>
+      <link>http://localhost:1313/categories/expectations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/expectations/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Getting Started</title>
       <link>http://localhost:1313/categories/getting-started/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/categories/getting-started/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scenario</title>
+      <link>http://localhost:1313/categories/scenario/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/scenario/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Steps</title>
+      <link>http://localhost:1313/categories/steps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/steps/</guid>
       <description></description>
     </item>
     

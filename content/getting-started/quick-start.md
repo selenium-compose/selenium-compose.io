@@ -1,7 +1,7 @@
 ---
 title: Quick start
 linktitle: Quick start
-description: Compose and run your first codeless selenium test to make sure Google is working!
+description: Let's compose codeless selenium test for Google!
 categories: [getting started]
 authors: ["Aram Petrosyan"]
 keywords: [quick start, usage]
@@ -31,7 +31,7 @@ npm i selenium-compose -g
 ## Step 2: Selenium Standalone
 
 {{% note %}}
-  [Selenium server](https://www.seleniumhq.org/) requires [Java](https://www.java.com/en/download/). Please make sure you have it install before moving forward
+  [Selenium server](https://www.seleniumhq.org/) requires [Java](https://www.java.com/en/download/). Please make sure you have it installed before moving forward
 {{% /note %}}
 
 ```bash
@@ -50,7 +50,7 @@ selenium-standalone start
 
 ## Step4: Compose the test
 
-Here is the simplest scenario to test [Google](https://google.com)
+The simplest scenario to test Google
 
 * Open https://google.com
 * Assert the page's title starts with "Google"
@@ -71,4 +71,4 @@ To see execution log we run the test in `debug` mode
 selenium-compose run google.yml --debug --timeout=20s --state
 ```
 
-<img src="/gif/google.gif"  />
+<script src="https://asciinema.org/a/PjF9mQhi8SqmQwUMK4tO1FgcT.js" data-speed=2 data-autoplay="true" data-loop="true" data-rows=25 id="asciicast-PjF9mQhi8SqmQwUMK4tO1FgcT" async></script>

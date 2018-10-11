@@ -61,9 +61,6 @@ Compiling Selenium Compose source is as easy as this one line command
 go get -u github.com/selenium-compose/selenium-compose
 ```
 
-## Docker
-
-
 ## Next Steps
 
 Now that you've installed Selenium Compose, read the [Quick Start guide][quickstart] and explore the rest of the documentation.

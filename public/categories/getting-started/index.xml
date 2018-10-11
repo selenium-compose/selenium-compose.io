@@ -5,28 +5,9 @@
     <link>http://localhost:1313/categories/getting-started/</link>
     <description>Recent content in Getting Started on Selenium Compose</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/getting-started/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Get Started</title>
-      <link>http://localhost:1313/getting-started/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/getting-started/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Basic Usage</title>
-      <link>http://localhost:1313/getting-started/usage/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/getting-started/usage/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Install Selenium Compose</title>
@@ -47,7 +28,7 @@ Selenium Compose currently provides pre-built binaries for the following:
       <guid>http://localhost:1313/getting-started/quick-start/</guid>
       <description>This quick start uses macOS and npm. For instructions about how to install Selenium Compose on other operating systems, see install.
 You also need npm to run this tutorial.
-  Step 1: Install Selenium Compose npm i selenium-compose -g  Step 2: Selenium Standalone  Selenium server requires Java. Please make sure you have it install before moving forward
+  Step 1: Install Selenium Compose npm i selenium-compose -g  Step 2: Selenium Standalone  Selenium server requires Java. Please make sure you have it installed before moving forward
   npm i selenium-standalone -g  The above will download and setup selenium-standalone server.</description>
     </item>
     

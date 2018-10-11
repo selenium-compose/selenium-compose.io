@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Expectations on Selenium Compose</title>
+    <link>http://localhost:1313/categories/expectations/</link>
+    <description>Recent content in Expectations on Selenium Compose</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="http://localhost:1313/categories/expectations/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Attribute</title>
+      <link>http://localhost:1313/expectations/attr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/expectations/attr/</guid>
+      <description>attr waits for the given attribute of the located WebElement(s) to satisfy one or more expected conditions until the timeout has exceeded. By default, if no condition is given it will wait until the attribute is not empty.
+Properties    Name Description Type Required     location Location of a WebElement(s) string true   selector Selector to locate a WebElement(s) on the DOM string false   name The name of the WebElement(s) attribute string true   is Assert the given attribute is equal to the expected value string false   contains Assert the given attribute contains the expected value string false   starts Assert the given attribute starts with the expected value string false   ends Assert the given attribute ends with the expected value string false   matches Assert the given attribute matches the expected pattern string false   ignore_case Perform case-insensitive comparisons if the flag is true bool false   count Expected count of WebElements satisfying given condition(s) Count false   timeout Waiting timeout until the expected condition(s) has been satisfied Duration false    Syntax attr accepts a map of values.</description>
+    </item>
+    
+    <item>
+      <title>Invisibility</title>
+      <link>http://localhost:1313/expectations/invisibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/expectations/invisibility/</guid>
+      <description>invisibility waits for the located WebElement(s) to become invisible until the timeout has exceeded.
+Properties    Name Description Type Required     location Web Element location string true   selector Methods by which to find WebElements string false   count Count of expected invisible WebElements Count false   timeout Wait until the expected condition has been satisfied Duration false    Syntax invisibility accepts a string or a map of values</description>
+    </item>
+    
+    <item>
+      <title>Presence</title>
+      <link>http://localhost:1313/expectations/presence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/expectations/presence/</guid>
+      <description>presence waits until at least one WebElement is physically present in the DOM at the given location at any state.
+Properties    Name Description Type Required     location Web Element location string true   selector Methods by which to find elements string false   count Count of expected invisible elements Count false   timeout Wait until the expected condition has been satisfied Duration false    Syntax presence accepts a string or a map of values</description>
+    </item>
+    
+    <item>
+      <title>Text</title>
+      <link>http://localhost:1313/expectations/text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/expectations/text/</guid>
+      <description>text waits until the located WebElement(s) content or value satisfies the expected condition(s). if the WebElement is a text input its value will be asserted otherwise the content of the element. If no condition is given text will wait until the WebElement value or content is not empty.
+Properties    Name Description Type Required     location Web Element location string false   selector Methods by which to find elements string false   is Assert content or value of the located WebElement(s) is equal to the expected string string false   contains Assert content or value of the located WebElement(s) contains the expected string string false   starts Assert content or value of the located WebElement(s) starts with the expected string string false   ends Assert content or value of the located WebElement(s) ends with the expected string string false   matches Assert content or value of the located WebElement(s) matches the pattern string false   ignore_case Perform case-insensitive comparisons if the flag is true bool false   count Expected count of WebElements satisfying given condition(s) Count false   timeout Waiting timeout until the expected condition(s) has been satisfied Duration false    Syntax text accepts a string or a map of values</description>
+    </item>
+    
+    <item>
+      <title>Title</title>
+      <link>http://localhost:1313/expectations/title/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/expectations/title/</guid>
+      <description>title waits until the current page&amp;rsquo;s title satisfy the expected condition(s)
+Properties    Name Description Type Required     is Expect the current page&amp;rsquo;s title to be the given string string false   contains Expect the current page&amp;rsquo;s title to contain the given string&amp;rsquo; string false   starts Expect the current page&amp;rsquo;s title to start the given string&amp;rsquo; string false   ends Expect the current page&amp;rsquo;s title to end with the given string&amp;rsquo; string false   matches Expect the current page&amp;rsquo;s title to end with the given string&amp;rsquo; string false   ignore_case Perform case-insensitive comparisons if the flag is true bool false   timeout Waiting timeout until the expected condition(s) has been satisfied Duration false    Syntax title accepts a string or a map of values</description>
+    </item>
+    
+    <item>
+      <title>Url</title>
+      <link>http://localhost:1313/expectations/url/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/expectations/url/</guid>
+      <description>url waits until the current page&amp;rsquo;s url satisfy the expected condition(s) Unlike all other conditions all url comparisons are case-insensitive.
+Properties    Name Description Type Required     is Expect the current page&amp;rsquo;s url to be the given string string false   contains Expect the current page&amp;rsquo;s url to contain the given string&amp;rsquo; string false   starts Expect the current page&amp;rsquo;s url to start the given string&amp;rsquo; string false   ends Expect the current page&amp;rsquo;s url to end with the given string&amp;rsquo; string false   matches Expect the current page&amp;rsquo;s url to end with the given string&amp;rsquo; string false   timeout Wait until the expected condition has been satisfied Duration false    Syntax url accepts a string or a map of values</description>
+    </item>
+    
+    <item>
+      <title>Visibility</title>
+      <link>http://localhost:1313/expectations/visibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/expectations/visibility/</guid>
+      <description>visibility waits for the located WebElement(s) to become visible until the timeout has exceeded. All comparisons are case-sensitive unless ignore_case has been set to true
+Properties    Name Description Type Required     location Web Element location string true   selector Methods by which to find elements string false   is Expect the WebElement(s) visibility whose content or value is equal to the given string string false   contains Expect the WebElement(s) visibility whose content or value contains the given string string false   starts Expect the WebElement(s) visibility whose content or value starts with the given string string false   ends Expect the WebElement(s) visibility whose content or value ends with the given string string false   matches Expect the WebElement(s) visibility whose content or value matches the given string string false   ignore_case Perform case-insensitive comparisons if the flag is true bool false   count Count of expected visible WebElements Count false   timeout Wait until the expected condition has been satisfied Duration false    Syntax visibility accepts a string or a map of values</description>
+    </item>
+    
+  </channel>
+</rss>

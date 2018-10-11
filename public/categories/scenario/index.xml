@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scenario on Selenium Compose</title>
+    <link>http://localhost:1313/categories/scenario/</link>
+    <description>Recent content in Scenario on Selenium Compose</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/scenario/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Http Requests</title>
+      <link>http://localhost:1313/scenario/https/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/scenario/https/</guid>
+      <description>Declaration https declaration syntax
+https: clear_users: url: https://selenium-compose.io/clear-all method: DELETE headers: - Authorization: authtoken - Content-Type: json  Usage Pre-defined http request is used with http statement
+https: clear_users: url: https://selenium-compose.io/clear-all method: DELETE headers: - Authorization: authtoken - Content-Type: json scenarios: my_scenario: - http: clear_users - open: https://selenium-compose.io - wait: visibility: .singin_btn  a</description>
+    </item>
+    
+    <item>
+      <title>Scope</title>
+      <link>http://localhost:1313/scenario/scope/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/scenario/scope/</guid>
+      <description>Global Definitions outside scenarios key are considered to be global and accessible for all scenarios
+Local Each scenario has its own scope or local. variables steps conditions https defined inside the local scope are accessible only within the scope
+ Local definitions override global definitions
+  Example scenario.yml
+# global variables: email: aram.petrosyan.88@gmail.com var2: val2 var3: val3 scenarios: account_registration: # local variables: email: admin@selenium-compose.io # overrides global variable pass: 123456 account_activation: .</description>
+    </item>
+    
+    <item>
+      <title>Sessions</title>
+      <link>http://localhost:1313/scenario/sessions/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/scenario/sessions/</guid>
+      <description>In some cases you may need to create multiple sessions and execute some of steps in different session. Every step has session property to specify against which session the steps should be executed.
+steps: create_new: - open: https://admin.selenium-compose.io/news - click: .new_news - type: location: editor keys: &amp;gt; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</description>
+    </item>
+    
+    <item>
+      <title>Steps</title>
+      <link>http://localhost:1313/scenario/steps/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/scenario/steps/</guid>
+      <description>Declaration steps declaration syntax
+conditions: singin_popup: - visibility: .popup - element: location: .close clickable: true - visibility: .singin_btn - visibility: .signup_btn - visibility: location: .social_auth_btn count: 3 steps: guest_action: - click: .create_post - wait: singin_popup - click: .popup .close  Usage Pre-defined step is used inside actions statement, which executes the steps
+conditions: singin_popup: - visibility: .popup - element: location: .close clickable: true - visibility: .singin_btn - visibility: .signup_btn - visibility: location: .</description>
+    </item>
+    
+    <item>
+      <title>Variables</title>
+      <link>http://localhost:1313/scenario/variables/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/scenario/variables/</guid>
+      <description> Naming Names must start with a letter and may contain letters, numbers or the _ (underscore) symbol. Pick names which clearly describe the variable&amp;rsquo;s purpose
+Declaration variables declaration syntax
+variables: name: Selenium Compose host: https://selenium-compose.io  Usage Variables are represented by a dollar sign followed by the name of the variable. The variable name is case-sensitive
+variables: forename: John family_name: Smith fullName: $forename, $family_name  </description>
+    </item>
+    
+    <item>
+      <title>Conditions</title>
+      <link>http://localhost:1313/scenario/conditions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/scenario/conditions/</guid>
+      <description>To create reusable expectation set which can be used in different scenarios or multiple times within a single scenario you can use condition storage to define a set of expectation.
+A condition defined in the global scope is available for all scenarios, locally defined storage is available only within the scenario is has been defined.
+Declaration conditions declaration syntax
+conditions: singin_popup: - visibility: .popup - element: location: .close clickable: true - visibility: .</description>
+    </item>
+    
+    <item>
+      <title>Overview</title>
+      <link>http://localhost:1313/scenario/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/scenario/overview/</guid>
+      <description>All scenarios are defined inside scenarios key inside the entry point file with the following scenario name and the scenario data
+Say we have selenium.yml which is he entry point of the program
+scenarios: scenario_name_1: actions: ... scenario_name_2: actions: ... scenario_name_3: actions: ...  which will be run
+selenium-compose run selenium.yml  Each scenario may also contain local Variables Conditions Steps https which are available only within the scenario and override the global definitions</description>
+    </item>
+    
+  </channel>
+</rss>
