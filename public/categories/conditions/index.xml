@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conditions on Selenium Compose</title>
+    <link>http://localhost:1313/categories/conditions/</link>
+    <description>Recent content in Conditions on Selenium Compose</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="http://localhost:1313/categories/conditions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Attribute</title>
+      <link>http://localhost:1313/conditions/attr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/conditions/attr/</guid>
+      <description>Properties attr has the following available options
+   Name Description Type Required     location Web element location string true   selector Methods by which to find elements string false   name Web element attribute name string true   not_empty Expect the element&amp;rsquo;s attribute is not empty bool false   is Expect the element&amp;rsquo;s attribute is equal to the given string string false   contains Expect the element&amp;rsquo;s attribute contains to the given string string false   starts Expect the element&amp;rsquo;s attribute starts to the given string string false   ends Expect the element&amp;rsquo;s attribute ends to the given string string false   matches Expect the element&amp;rsquo;s attribute matches to the given pattern string false   ignore_case Perform case-insensitive comparisons if the flag is true bool false   count Expected elements count Count false   timeout Wait until the expected condition has been satisfied Duration false    Usage attr condition accepts only a map of values.</description>
+    </item>
+    
+  </channel>
+</rss>

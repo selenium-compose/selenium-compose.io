@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on </title>
-    <link>https://selenium-compose.io/categories/</link>
-    <description>Recent content in Categories on </description>
+    <title>Categories on Selenium Compose</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on Selenium Compose</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="https://selenium-compose.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Conditions</title>
+      <link>http://localhost:1313/categories/conditions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/conditions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Getting Started</title>
+      <link>http://localhost:1313/categories/getting-started/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/getting-started/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

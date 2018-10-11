@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    
+    <link rel="preload" href="http://localhost:1313/files/muli-latin-200.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="http://localhost:1313/files/muli-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="http://localhost:1313/files/muli-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     
+    <title>Open Documentation | Selenium Compose</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+     <meta name="generator" content="Hugo 0.38" />
+
+      
+        <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+      
+
+    <link href='/dist/main.css' rel='stylesheet' type="text/css" /><meta property="og:title" content="Open Documentation" />
+<meta property="og:description" content="Load a new web page in the current browser window. This is done using an HTTP GET operation, and the method will block until the load is complete.
+This will follow redirects issued either by the server or as a meta-redirect from within the returned HTML.
+Key Open goes under open key.
+Properties    Name Description Type Required     url Web page url to load string false   timeout Wait timeout until the page has been loaded." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/actions/open/" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Open Documentation">
+<meta itemprop="description" content="Load a new web page in the current browser window. This is done using an HTTP GET operation, and the method will block until the load is complete.
+This will follow redirects issued either by the server or as a meta-redirect from within the returned HTML.
+Key Open goes under open key.
+Properties    Name Description Type Required     url Web page url to load string false   timeout Wait timeout until the page has been loaded.">
+
+
+
+<meta itemprop="wordCount" content="158">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Open Documentation"/>
+<meta name="twitter:description" content="Load a new web page in the current browser window. This is done using an HTTP GET operation, and the method will block until the load is complete.
+This will follow redirects issued either by the server or as a meta-redirect from within the returned HTML.
+Key Open goes under open key.
+Properties    Name Description Type Required     url Web page url to load string false   timeout Wait timeout until the page has been loaded."/>
+
+
+
+
+
+  </head>
+  <body class="ma0 sans-serif bg-primary-color-light">
+    
+<nav class="bg-primary-color-dark pv4 w-100" role="navigation">
+  <div class="center flex-ns flex-wrap items-center justify-start mw9" style="flex: 1">
+    <h1 class="dim f3 lh-solid ml0-ns mr0 mr4-l mv0 pl3 pl4-ns flex-auto">
+      <a href="http://localhost:1313/" class="link white">
+         Selenium Compose
+      </a>
+    </h1>
+    <ul class="list ma0 pa0 dn dib-l" >
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/getting-started/quick-start/" class="dim link light-silver">
+            Getting Started
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="" class="dim link light-silver">
+            Developer Guide
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/api/" class="dim link light-silver">
+            API Reference
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="" class="dim link light-silver">
+            Community
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="" class="dim link light-silver">
+            Contribution
+              
+            
+            
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</nav>
+
+    
+    <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
+      
+  <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
+    <div class="flex-l">
+
+      <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
+<aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
+	
+
+	<div date-pref>
+		
+			<a href="http://localhost:1313/actions/move_to/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Moveto Documentation ">
+				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+			</a>
+		
+
+		
+			<a href="http://localhost:1313/actions/pause/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Pause">
+			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+			</a>
+		
+	</div>
+
+</aside>
+</div>
+
+      <div class="order-1 w-60-l mw7 ph0 ph5-ns mid-gray nested-copy-line-height no-underline nested-links nested-img nested-copy-seperator nested-blockquote mt0-ns" style="flex-grow:1;">
+        <div class="documentation-copy center measure-wide-l">
+          <div id="readout" class="fixed right-0 bottom-0">
+          </div>
+          <header class="flex-none w-100">
+  
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Open Documentation</h1>
+</header>
+
+<aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+
+  
+</aside>
+
+
+
+<div class="prose" id="prose">
+
+
+
+<p>Load a new web page in the current browser window. This is done using an HTTP GET operation,
+and the method will block until the load is complete.</p>
+
+<p>This will follow redirects issued either by the server or as a meta-redirect from within the returned HTML.</p>
+
+<h2 id="key">Key</h2>
+
+<p>Open goes under <code>open</code> key.</p>
+
+<h2 id="properties">Properties</h2>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>url</td>
+<td>Web page url to load</td>
+<td>string</td>
+<td><code>false</code></td>
+</tr>
+
+<tr>
+<td>timeout</td>
+<td>Wait timeout until the page has been loaded.</td>
+<td>Duration</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="inline">Inline</h3>
+
+<p>Open requested url and wait the default timeout to load the web page. When the timeout exceeded and the web page has not been loaded yet the test execution terminated with failure.</p>
+
+<pre><code class="language-yaml">- open: https://selenium-compose.io | $url
+</code></pre>
+
+<h3 id="mapping">Mapping</h3>
+
+<p>Open requested url and wait the specified timeout to load the web page. When the timeout exceeded and the web page has not been loaded yet the test execution terminated with failure.</p>
+
+<pre><code class="language-yaml">- open:
+    url: https://selenium-compose.io | $domain
+    timeout: 200ms | $timeout
+</code></pre>
+
+</div>
+
+          
+
+        </div>
+      </div>
+      <div class="order-0 w-20 dn db-l">
+        
+<nav role="navigation">
+  <ul class="list pa0 nl2">
+    
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="/about" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".about">About</a>
+      </li>
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".getting-started">Getting Started</a>
+        <ul class="getting-started desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+          <li class="f6 fw4">
+            <a href="/getting-started/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Overview
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/getting-started/quick-start/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Quick start
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/getting-started/installing/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Installation
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/getting-started/usage/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Basic Usage
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="/developer-guide" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".developer-guide">Developer Guide</a>
+      </li>
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="/scenario" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".scenario">Scenario</a>
+      </li>
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".actions">Actions</a>
+        <ul class="actions desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+          <li class="f6 fw4">
+            <a href="/actions/alert/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Alert
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/actions/clear/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Clear
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/actions/click/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Click
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/actions/close/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Close
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/actions/http/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Http Request
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/actions/js/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Javascript
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".conditions">Conditions</a>
+        <ul class="conditions desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+          <li class="f6 fw4">
+            <a href="/conditions/attr/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Attribute
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/conditions/invisibility/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Invisibility
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/conditions/presence/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Presence
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/conditions/text/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Text
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/conditions/title/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Title
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/conditions/url/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Url
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/conditions/visibility/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Visibility
+            </a>
+          </li>
+        </ul>
+      </li>
+  </ul>
+</nav>
+
+      </div>
+
+    </div>
+  </article>
+
+  <div class="w-100 bg-light-gray">
+    <div class="mw7 pa4 center nested-lh-copy lh-copy">
+      <h6 class="f4 dark-gray mb2">
+  <a href="http://localhost:1313/actions/open/" class="hide-child link primary-color">
+  <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+</span>
+    “Open Documentation”
+  </a> was last updated: January 1, 0001
+</h6>
+
+      <a href="edit/master/content/en/actions/open.md" class="
+f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
+">Improve this page</a>
+
+      
+
+
+    </div>
+  </div>
+
+    </main>
+
+    <footer class="bg-primary-color-dark ph4-ns pt4 relative w-100" role="contentinfo">
+    <div class="center flex-ns flex-wrap justify-between mw9 w-90">
+      <div class="pb3 pt4 w-100">
+         <div class="b f3 light-gray mb3 nested-links tc">
+           By the <a href="https://github.com/selenium-compose/selenium-compose/graphs/contributors" class="link">contributors</a> who care<br />
+          </div>
+
+          <div class="center w4"></div>
+
+          <ul class="center f6 list ma0 mv3 pa0 tc"><li class="dib mr3"><a href="https://github.com/selenium-compose/selenium-compose/issues/new" class="dim link light-gray pv2">File an Issue</a></li><li class="dib mr3"><a href="https://join.slack.com/t/seleniumcompose/shared_invite/enQtMzYwMzI2MTQ2Njc4LTQ2MDFmMjBhYTllNDdhNjc5NDM3ZGUzNmZiMDZkOGM1NDcxMTdjYWM4OWMxMmRiYThlZWQ1NTVkOGE0NDVkMWY" class="dim link light-gray pv2">Get Help on Slack</a></li><li class="dib"><a href="https://gitter.im/SelenumC/Lobby" class="dim link light-gray pv2">Discuss Source Code</a></li></ul>
+
+          <ul class="center f6 list ma0 mv3 pa0 tc">
+            <li class="dib mr3"><a href="https://twitter.com/selecniumC" class="dim link light-gray pv2">@seleniumC</a></li>
+            <li class="dib mr3"><a href="https://twitter.com/aramp88" class="dim link light-gray pv2">@aramp88</a></li>
+          </ul>
+
+          
+
+          <div class="center f6 list ma0 mv3 pa0 tc">
+            <p class="light-gray pv2">
+              A huge ❤️for <a href="https://gohugo.io" class="dim link light-gray pv2" target="_blank"><span style="color: #FF4188">H</span><span style="color: #0694CB">U</span><span style="color: #32BA91">G</span><span style="color: #EBB951">O</span>
+              </a>
+            </p>
+          </div>
+      </div>
+    </div>
+
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 w-100"><div  class="globalmenu mobilemenu pb3 dn">
+    
+
+<ul class="list hidden dib ph0 ma0 scrolling-touch tc">
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/getting-started/quick-start/" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Getting Started
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Developer Guide
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/api/" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          API Reference
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Community
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Contribution
+        </a>
+    </li>
+  
+</ul>
+
+</div>
+<div  class="docsmenu mobilemenu pb3 dn">
+    
+
+<ul class="list dib ph0 ma0 scrolling-touch tc">
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/about" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          About
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/getting-started" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Getting Started
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/developer-guide" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Developer Guide
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/scenario" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Scenario
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/actions" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Actions
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/conditions" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Conditions
+        </a>
+    </li>
+  
+</ul>
+
+</div>
+
+<div class="flex dn-l justify-between">
+  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link mr2 white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".globalmenu">Menu</button>
+
+  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">Docs Menu</button>
+</div>
+</div>
+
+</footer>
+
+    <script src="/dist/app.bundle.js"></script>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+  <script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

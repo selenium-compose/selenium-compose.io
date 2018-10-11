@@ -1,13 +1,285 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
-    <link>https://selenium-compose.io/</link>
-    <description>Recent content on </description>
+    <title>Selenium Compose</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Selenium Compose</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="https://selenium-compose.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Quick start</title>
+      <link>http://localhost:1313/getting-started/quick-start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/getting-started/quick-start/</guid>
+      <description>This quick start uses macOS and npm. For instructions about how to install Selenium Compose on other operating systems, see install.
+You also need npm to run this tutorial.
+  Step 1: Install Selenium Compose npm i selenium-compose -g  Step 2: Selenium Standalone  Selenium server requires Java. Please make sure you have it install before moving forward
+  npm i selenium-standalone -g  The above will download and setup selenium-standalone server.</description>
+    </item>
+    
+    <item>
+      <title>Install Selenium Compose</title>
+      <link>http://localhost:1313/getting-started/installing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/getting-started/installing/</guid>
+      <description>Selenium Compose is written in Go with support for multiple platforms. The latest release can be found at Selenium Compose Releases.
+Selenium Compose currently provides pre-built binaries for the following:
+ macOS (Darwin) for x64, i386, and ARM architectures Windows Linux  Selenium Compose may also be compiled from source wherever the Go toolchain can run; e.g., on other operating systems such as DragonFly BSD, OpenBSD, Plan&amp;nbsp;9, Solaris, and others.</description>
+    </item>
+    
+    <item>
+      <title>Basic Usage</title>
+      <link>http://localhost:1313/getting-started/usage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/getting-started/usage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Alert</title>
+      <link>http://localhost:1313/actions/alert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/actions/alert/</guid>
+      <description>Alert waits until an alert appears on the current page to accept or decline.
+Key Alert goes under alert key.
+Properties    Name Description Type Required     is Expect the current alert text is equal to the given string string false   contains Expect the current alert text contains the given string string false   starts Expect the current alert text starts the given string string false   ends Expect the current alert text ends the given string string false   matches Expect the current alert text matches the given pattern string false   ignore_case Perform case-insensitive comparisons if the flag is true bool false   timeout  Duration false   accept Flag specifying whether accept or decline the current alert bool false    Usage Accept Accept the current alert.</description>
+    </item>
+    
+    <item>
+      <title>Attribute</title>
+      <link>http://localhost:1313/conditions/attr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/conditions/attr/</guid>
+      <description>Properties attr has the following available options
+   Name Description Type Required     location Web element location string true   selector Methods by which to find elements string false   name Web element attribute name string true   not_empty Expect the element&amp;rsquo;s attribute is not empty bool false   is Expect the element&amp;rsquo;s attribute is equal to the given string string false   contains Expect the element&amp;rsquo;s attribute contains to the given string string false   starts Expect the element&amp;rsquo;s attribute starts to the given string string false   ends Expect the element&amp;rsquo;s attribute ends to the given string string false   matches Expect the element&amp;rsquo;s attribute matches to the given pattern string false   ignore_case Perform case-insensitive comparisons if the flag is true bool false   count Expected elements count Count false   timeout Wait until the expected condition has been satisfied Duration false    Usage attr condition accepts only a map of values.</description>
+    </item>
+    
+    <item>
+      <title>Clear</title>
+      <link>http://localhost:1313/actions/clear/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/actions/clear/</guid>
+      <description>Clear waits until the element is present in the DOM to clear its value.
+If found element(s) is a text entry element, clear will clear the value. Has no effect on other elements. Text entry elements are INPUT and TEXTAREA elements. Note that the events fired by this event may not be as you&amp;rsquo;d expect. In particular, any keyboard or mouse events. If you want to ensure keyboard events are fired, consider using something like type with the backspace key.</description>
+    </item>
+    
+    <item>
+      <title>Click</title>
+      <link>http://localhost:1313/actions/click/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/actions/click/</guid>
+      <description>Click on a Web Element. There are some preconditions for an element to be clicked. The element must be visible and it must have a height and width greater then 0.
+Before performing click action it waits until the element becomes clickable.
+Click action is allowed to be performed on one Web Element at a time, thus, if multiple elements found and resolve is not given, the test fails with error.</description>
+    </item>
+    
+    <item>
+      <title>Close</title>
+      <link>http://localhost:1313/actions/close/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/actions/close/</guid>
+      <description>Find a window using its title, url or index and close. All comparision are made in case-sensitive manner for title and case-insensitive for url.
+Only one window can be closed at a time, thus, if multiple windows are matched to the provided conditions the test will fail, therefore, try to be more precise in the conditions to target the right window to close.
+You can also mix title and url conditions.</description>
+    </item>
+    
+    <item>
+      <title>Http Request</title>
+      <link>http://localhost:1313/actions/http/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/actions/http/</guid>
+      <description>Make an HTTP request.
+Key HTTP Request goes under http key.
+Properties    Name Description Type Required     url HTTP Request url string true   method HTTP Method string false   headers HTTP Request headers object false   contenttype HTTP Request content type string false   data HTTP Request data any false    Usage Sample - http: url: https://selenium-compose.</description>
+    </item>
+    
+    <item>
+      <title>Invisibility</title>
+      <link>http://localhost:1313/conditions/invisibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/conditions/invisibility/</guid>
+      <description>Assert Web Elements invisibility.
+invisibility allows to expect invisibility of Web Elements present in the DOM. A Web Element is considered to be invisible if it is not viewable on the page due to its styling or size.
+Key Invisibility goes under invisibility key.
+Properties    Name Description Type Required     location Web element location string false   selector Methods by which to find elements string false   count Count of expected invisible elements Count false   timeout Wait until the expected condition has been satisfied Duration false    Usage invisibility accepts a string or a map of values.</description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>http://localhost:1313/actions/js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/actions/js/</guid>
+      <description>Execute a javascript.
+Key Javascript goes under javascript key.
+Properties    Name Description Type Required     content Javascript to execute or js file path string true   args Arguments to the script array false    Usage Inline Use inline syntax execute javascript synchronously without arguments.
+Code - js: &amp;quot;var elem = document.getElementById(&#39;bootstrap&#39;); elem.parentNode.removeChild(elem)&amp;quot; | $js_content  File If provided string is a valid js file, the content of the file will be executed.</description>
+    </item>
+    
+    <item>
+      <title>Keydown</title>
+      <link>http://localhost:1313/actions/key_down/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/actions/key_down/</guid>
+      <description> Send a sequence of keystrokes to the active element. Modifiers are not released at the end of each call, thus, make sure you release all modifiers using key_up.
+Usage - key_down: abc | $keys | @ctrl @shift @alt  </description>
+    </item>
+    
+    <item>
+      <title>Keyup</title>
+      <link>http://localhost:1313/actions/key_up/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/actions/key_up/</guid>
+      <description> Indicates that a previous keystroke sent by key_down should be released.
+Usage - key_up: abc | $keys | @ctrl @shift @alt  </description>
+    </item>
+    
+    <item>
+      <title>Maximize</title>
+      <link>http://localhost:1313/actions/maximize/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/actions/maximize/</guid>
+      <description>Find a window using its title, url or index and maximize. All comparision are made in case-sensitive manner for title and case-insensitive for url.
+Only one window can be maximized at a time, thus, if multiple windows are matched to the provided conditions the test will fail, therefore, try to be more precise in the conditions to target the right window to maximize.
+You can also mix title and url conditions.</description>
+    </item>
+    
+    <item>
+      <title>Mouse</title>
+      <link>http://localhost:1313/actions/mouse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/actions/mouse/</guid>
+      <description> Hold down or release mouse left button.
+Usage Down Causes the left mouse button to be held down.
+- mouse: down  Up Causes the left mouse button to be released.
+- mouse: up  </description>
+    </item>
+    
+    <item>
+      <title>Moveto Documentation</title>
+      <link>http://localhost:1313/actions/move_to/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/actions/move_to/</guid>
+      <description>Move the mouse to relative coordinates from center of element, If the element is not visible, it will be scrolled into view.
+move_to can be performed only on one element at a time, thus, be more precise in your selection to target the right element or use resolve to specify to which found element resolve.
+Key MoveTo goes under moveto key.
+Properties    Name Description Type Required     location Web element location string true   selector Methods by which to find elements string false   resolve Resolver string false   x The relative X coordinate from the center of element int false   y The relative Y coordinate from the center of element int false    Usage Inline Use inline syntax to move to element using provided location and default selector.</description>
+    </item>
+    
+    <item>
+      <title>Open Documentation</title>
+      <link>http://localhost:1313/actions/open/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/actions/open/</guid>
+      <description>Load a new web page in the current browser window. This is done using an HTTP GET operation, and the method will block until the load is complete.
+This will follow redirects issued either by the server or as a meta-redirect from within the returned HTML.
+Key Open goes under open key.
+Properties    Name Description Type Required     url Web page url to load string false   timeout Wait timeout until the page has been loaded.</description>
+    </item>
+    
+    <item>
+      <title>Pause</title>
+      <link>http://localhost:1313/actions/pause/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/actions/pause/</guid>
+      <description> Pauses the current test execution the given amount of time.
+Usage Pause takes a valid duration.
+Milliseconds Wait 300 milliseconds before executing next action.
+- pause: 300ms  Seconds Wait 2 seconds before executing next action.
+- pause: 2s  Minutes Wait 3 minutes before executing next action.
+- pause: 3m  </description>
+    </item>
+    
+    <item>
+      <title>Presence</title>
+      <link>http://localhost:1313/conditions/presence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/conditions/presence/</guid>
+      <description>Assert Web Elements presence in the DOM in any state.
+presence allows to expect Web Elements presence in the DOM.
+Key Presence goes under presence key.
+Properties    Name Description Type Required     location Web element location string false   selector Methods by which to find elements string false   count Count of expected present elements Count false   timeout Wait until the expected condition has been satisfied Duration false    Usage presence accepts a string or a map of values.</description>
+    </item>
+    
+    <item>
+      <title>Text</title>
+      <link>http://localhost:1313/conditions/text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/conditions/text/</guid>
+      <description>Assert a Web Element content or value.
+text allows to expect Web Elements text, content or value to be equal to the expected value, contain, start, end with the piece of string or match the given pattern. If the element is an input its conditions are being checked against its value otherwise the element content.
+Key Text goes under text key.
+Properties    Name Description Type Required     location Web element location string false   selector Methods by which to find elements string false   notempty Expect the element&amp;rsquo;s content or value is not empty bool false   is Expect the element&amp;rsquo;s content or value is equal to the given string string false   contains Expect the element&amp;rsquo;s content or value contains the given string string false   starts Expect the element&amp;rsquo;s content or value starts with the given string string false   ends Expect the element&amp;rsquo;s content or value ends with the given string string false   matches Expect the element&amp;rsquo;s content or value matches the pattern string false   ignore_case Perform case-insensitive comparisons if the flag is true bool false   count Count of expected elements Count false   timeout Wait until the expected condition has been satisfied Duration false    Usage text condition accepts only a map of values.</description>
+    </item>
+    
+    <item>
+      <title>Title</title>
+      <link>http://localhost:1313/conditions/title/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/conditions/title/</guid>
+      <description>Assert the current page&amp;rsquo;s title.
+Key Title goes under title key.
+Properties    Name Description Type Required     is Expect the current page&amp;rsquo;s title to be the given string string false   contains Expect the current page&amp;rsquo;s title to contain the given string&amp;rsquo; string false   starts Expect the current page&amp;rsquo;s title to start the given string&amp;rsquo; string false   ends Expect the current page&amp;rsquo;s title to end with the given string&amp;rsquo; string false   matches Expect the current page&amp;rsquo;s title to end with the given string&amp;rsquo; string false   ignorecase  bool false   timeout Wait until the expected condition has been satisfied Duration false    Usage Inline Use inline syntax to expect the current title contains the piece of string.</description>
+    </item>
+    
+    <item>
+      <title>Url</title>
+      <link>http://localhost:1313/conditions/url/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/conditions/url/</guid>
+      <description>Assert the current page&amp;rsquo;s url. All comparision are performed in case-insensitive manner for url.
+Key Url goes under url key.
+Properties    Name Description Type Required     is Expect the current page&amp;rsquo;s url to be the given string string false   contains Expect the current page&amp;rsquo;s url to contain the given string&amp;rsquo; string false   starts Expect the current page&amp;rsquo;s url to start the given string&amp;rsquo; string false   ends Expect the current page&amp;rsquo;s url to end with the given string&amp;rsquo; string false   matches Expect the current page&amp;rsquo;s url to end with the given string&amp;rsquo; string false   schema Expect the current page&amp;rsquo;s url schema is the given string (http or https)&amp;rsquo; string false   ignorecase  bool false   timeout Wait until the expected condition has been satisfied Duration false    Usage Inline Use inline syntax to expect the current url contains the piece of string.</description>
+    </item>
+    
+    <item>
+      <title>Visibility</title>
+      <link>http://localhost:1313/conditions/visibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/conditions/visibility/</guid>
+      <description>Assert Web Elements visibility.
+visibility allows to expect visibility of Web Elements present in the DOM. A Web Element is considered to be visible if it is viewable on the page.
+Key Visibility goes under visibility key.
+Properties    Name Description Type Required     location Web element location string false   selector Methods by which to find elements string false   is Expect the element visibility whose content or value is equal to the given string string false   contains Expect the element visibility whose content or value contains the given string string false   starts Expect the element visibility whose content or value starts with the given string string false   ends Expect the element visibility whose content or value ends with the given string string false   matches Expect the element visibility whose content or value matches the given string string false   ignore_case Perform case-insensitive comparisons if the flag is true bool false   count Expected visible elements count Count false   timeout Wait until the expected condition has been satisfied Duration false    Usage visibility accepts a string or a map of values.</description>
+    </item>
+    
+    <item>
+      <title>nav</title>
+      <link>http://localhost:1313/actions/nav/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/actions/nav/</guid>
+      <description> Navigate in the current browser back, forward or refresh the current page.
+Usage Back Back moves backward in history.
+- nav: back  Forward Forward moves forward in history.
+- nav: forward  Refresh Refresh refreshes the page.
+- nav: refresh  </description>
+    </item>
     
   </channel>
 </rss>
