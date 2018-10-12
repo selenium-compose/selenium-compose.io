@@ -1,11 +1,15 @@
-FROM ubuntu
+FROM ubuntu as builder
 
-WORKDIR /app
+WORKDIR /source
 
 RUN apt-get -y update && apt-get install -y hugo git
 
 RUN git clone https://github.com/selenium-compose/selenium-compose.io.git .
 
-EXPOSE 1313
+RUN hugo
 
-CMD hugo --renderToDisk=true --watch=true --bind="0.0.0.0" server
+FROM nginx
+
+WORKDIR /website
+
+COPY --from=builder /source/public /usr/share/nginx/html
