@@ -2,6 +2,7 @@ baseURL: https://selenium-compose.io
 title: Selenium Compose
 
 params:
+  baseURL: https://selenium-compose.io
   description: Description-driven selenium tests composition
   github_repo: https://github.com/selenium-compose/selenium-compose/issues/new
   slack: https://join.slack.com/t/seleniumcompose/shared_invite/enQtMzYwMzI2MTQ2Njc4LTQ2MDFmMjBhYTllNDdhNjc5NDM3ZGUzNmZiMDZkOGM1NDcxMTdjYWM4OWMxMmRiYThlZWQ1NTVkOGE0NDVkMWY
