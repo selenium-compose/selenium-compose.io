@@ -2,7 +2,6 @@
 title: Text
 description: Assert the content or the value of a WebElement(s)
 categories: [expectations]
-authors: ["Aram Petrosyan"]
 keywords: [expectations,assertion,text]
 menu:
   docs:

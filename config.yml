@@ -1,5 +1,7 @@
 baseURL: https://selenium-compose.io/
 title: Selenium Compose
+disqusShortname: selenium-compose-io
+enableGitInfo: true
 
 params:
   baseURL: https://selenium-compose.io
@@ -45,3 +47,12 @@ menu:
     identifier: expectations
     url: /expectations
     weight: 35
+    post: break
+  - name: Community
+    identifier: commuity
+    url: /community
+    weight: 45
+  - name: Contribute
+    identifier: contribute
+    url: /contribute
+    weight: 55

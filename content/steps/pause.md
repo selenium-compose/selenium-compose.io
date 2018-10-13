@@ -2,7 +2,6 @@
 title: Pause
 description: Pauses the current test execution the given amount of time
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,pause]
 menu:
   docs:

@@ -2,7 +2,6 @@
 title: Close
 description: Lookup for a browser and close it
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,close]
 menu:
   docs:

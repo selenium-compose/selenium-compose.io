@@ -2,7 +2,6 @@
 title: Attribute
 description: Assert the given attribute of a WebElement(s)
 categories: [expectations]
-authors: ["Aram Petrosyan"]
 keywords: [expectations,assertion,attribute]
 menu:
   docs:
@@ -127,7 +126,7 @@ Wait until the `value` attribute of the WebElement matches `[a-z\\.0-9@]+` patte
 
 #### Mixed
 
-It is possible to mix `contains`, `starts`, `ends`, `matches` properties to wait until
+It is possible to mix `contains` `starts` `ends` `matches` properties to wait until
 the given attribute of the located WebElement contains, starts, ends and matches the pattern
 at the same time
 

@@ -2,7 +2,6 @@
 title: Open
 description: Load a new web page in the current browser window
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,open]
 menu:
   docs:

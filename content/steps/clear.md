@@ -2,7 +2,6 @@
 title: Clear
 description: Clear an input element value
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,clear]
 menu:
   docs:
@@ -24,7 +23,7 @@ elements. Text entry elements are INPUT and TEXTAREA elements.
 {{% note %}}
 Events fired by this event may not be as you'd expect. In particular, any keyboard or mouse events.
 If you want to ensure keyboard events are fired, consider using something like <a href="/docs/type.html">type</a>
-with the <a href="/docs/type.html#backspace">backspace</a> key.
+with the <a href="/steps/key/#special-keys">backspace</a> key.
 {{% /note %}}
 
 ## Properties

@@ -2,7 +2,6 @@
 title: Presence
 description: Assert presence of a WebElement(s) in the DOM
 categories: [expectations]
-authors: ["Aram Petrosyan"]
 keywords: [expectations,assertion,presence]
 menu:
   docs:

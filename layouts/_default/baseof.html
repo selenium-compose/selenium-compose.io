@@ -13,7 +13,6 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
-    <meta property="og:image" content="https://selenium-compose.io/images/logo-wide.png" />
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
      {{ .Hugo.Generator }}
@@ -39,9 +38,7 @@
         {{ partial "gtag" . }}
       {{ end }}
 
-
-
-
+    <meta property="og:image" content="https://selenium-compose.io/images/logo-wide.png" />
   </head>
   <body class="ma0 sans-serif bg-primary-color-light{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
     {{ block "nav" . }}{{ partial "site-nav.html" . }}{{ end }}

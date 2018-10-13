@@ -2,7 +2,6 @@
 title: Switch
 description: Lookup for a browser and switch to it
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,switch]
 menu:
   docs:

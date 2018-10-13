@@ -2,7 +2,6 @@
 title: Visibility
 description: Assert visibility of a WebElement(s)
 categories: [expectations]
-authors: ["Aram Petrosyan"]
 keywords: [expectations,assertion,visibility]
 menu:
   docs:

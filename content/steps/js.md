@@ -2,7 +2,6 @@
 title: Javascript
 description: Execute a javascript code.
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,javascript]
 menu:
   docs:

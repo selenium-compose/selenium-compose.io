@@ -2,7 +2,7 @@
 title: Alert
 description: Accept or decline the current alert
 categories: [steps]
-authors: ["Aram Petrosyan"]
+authors: [Aram Petrosyan]
 keywords: [steps,alert]
 menu:
   docs:

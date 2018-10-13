@@ -2,7 +2,6 @@
 title: Invisibility
 description: Assert invisibility of a WebElement(s)
 categories: [expectations]
-authors: ["Aram Petrosyan"]
 keywords: [expectations,assertion,invisibility]
 menu:
   docs:

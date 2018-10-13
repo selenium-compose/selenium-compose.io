@@ -3,7 +3,6 @@ title: Install Selenium Compose
 linktitle: Installation
 description: Install Hugo on macOS, Windows, Linux, OpenBSD, FreeBSD, and on any machine where the Go compiler tool chain can run.
 categories: [getting started]
-authors: ["Aram Petrosyan"]
 keywords: [install,pc,windows,linux,macos,binary]
 menu:
   docs:

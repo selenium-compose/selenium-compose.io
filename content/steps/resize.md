@@ -2,7 +2,6 @@
 title: Resize
 description: Lookup for a browser and resize it
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,resize]
 menu:
   docs:

@@ -2,7 +2,6 @@
 title: Key Press & Release
 description: "`press` sends a sequence of keystrokes to the active element, `release` indicates that a previous keystroke sent by `press` should be released"
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,key up, key down]
 menu:
   docs:

@@ -2,7 +2,6 @@
 title: Url
 description: Assert the current page's url
 categories: [expectations]
-authors: ["Aram Petrosyan"]
 keywords: [expectations,assertion,url]
 menu:
   docs:

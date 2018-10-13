@@ -2,7 +2,6 @@
 title: Navigation
 description: Navigate in the current browser back, forward or refresh the current page
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,navigation]
 menu:
   docs:

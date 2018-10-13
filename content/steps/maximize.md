@@ -2,7 +2,6 @@
 title: Maximize
 description: Lookup for a browser and maximize it
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,maximize]
 menu:
   docs:

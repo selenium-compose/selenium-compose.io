@@ -2,7 +2,6 @@
 title: Capture
 description: Capture a screenshot of the browser window
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,capture]
 menu:
   docs:

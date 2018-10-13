@@ -2,7 +2,6 @@
 title: Mouse
 description: Hold down or release mouse left button
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,key up, key down]
 menu:
   docs:

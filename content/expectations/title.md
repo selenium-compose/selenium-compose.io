@@ -2,7 +2,6 @@
 title: Title
 description: Assert the current page's title
 categories: [expectations]
-authors: ["Aram Petrosyan"]
 keywords: [expectations,assertion,title]
 menu:
   docs:

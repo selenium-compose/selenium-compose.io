@@ -2,7 +2,6 @@
 title: Submit
 description: Submit a form or a submit button
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,resize]
 menu:
   docs:

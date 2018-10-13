@@ -2,7 +2,6 @@
 title: Click
 description: Perform a click on a WebElement or the web page
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,click]
 menu:
   docs:

@@ -2,7 +2,6 @@
 title: HTTP Request
 description: Make an HTTP request
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,http]
 menu:
   docs:

@@ -2,7 +2,6 @@
 title: Type
 description: Type into all located WebElements
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,navigation]
 menu:
   docs:

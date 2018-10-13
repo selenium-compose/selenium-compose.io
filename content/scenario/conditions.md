@@ -2,7 +2,6 @@
 title: Conditions
 linktitle: Conditions
 description: A `condition` is a storage with an associated name and a set of `expectation`s
-authors: ["Aram Petrosyan"]
 categories: [scenario]
 keywords: [scenario,import,condition]
 menu:

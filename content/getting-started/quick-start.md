@@ -3,7 +3,6 @@ title: Quick start
 linktitle: Quick start
 description: Let's compose codeless selenium test for Google!
 categories: [getting started]
-authors: ["Aram Petrosyan"]
 keywords: [quick start, usage]
 menu:
   docs:

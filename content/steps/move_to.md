@@ -2,7 +2,6 @@
 title: Move To
 description: Move the mouse to relative coordinates from center of element
 categories: [steps]
-authors: ["Aram Petrosyan"]
 keywords: [steps,move_to]
 menu:
   docs:
