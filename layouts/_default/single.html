@@ -12,7 +12,6 @@
           </div>
           {{ .Render "page" }}
           {{ partial "related.html" . }}
-          {{ template "_internal/disqus.html" . }}
         </div>
       </div>
       <div class="order-0 w-20 dn db-l">
@@ -20,6 +19,12 @@
       </div>
     </div>
   </article>
+
+  <div class="w-100">
+    <div class="mw7 pa4 center nested-lh-copy lh-copy">
+      {{ template "_internal/disqus.html" . }}
+    </div>
+  </div>
 
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
