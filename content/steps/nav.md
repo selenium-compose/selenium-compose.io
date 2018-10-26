@@ -1,6 +1,6 @@
 ---
 title: Navigation
-description: Navigate in the current browser back, forward or refresh the current page
+description: Navigate back, forward or refresh the current page
 categories: [steps]
 keywords: [steps,navigation]
 menu:
@@ -10,8 +10,6 @@ menu:
 draft: false
 toc: true
 ---
-
-
 
 ## Back
 
