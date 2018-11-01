@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clear test html</title>
+</head>
+<body>
+
+<input type="text" class="my-input" value="111" />
+<input type="text" class="my-input" value="222" />
+<input type="text" class="my-input" value="333" />
+<input type="text" class="my-input" value="444" />
+
+<div id="block"></div>
+
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+<script>
+    setTimeout(function () {
+        $("#block").html("<input type=\"text\" class=\"my-input-1\" value=\"111\" />\n" +
+                "<input type=\"text\" class=\"my-input-1\" value=\"222\" />\n" +
+                "<input type=\"text\" class=\"my-input-1\" value=\"333\" />\n" +
+                "<input type=\"text\" class=\"my-input-1\" value=\"444\" />")
+    }, 10000)
+</script>
+</html>

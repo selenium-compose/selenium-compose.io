@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Key test html</title>
+</head>
+<body>
+
+<div id="box1"></div>
+<div id="box2"></div>
+
+</body>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+<script>
+    $(function () {
+        $(document).keydown(function (evt) {
+            if(evt.ctrlKey) {
+                alert(evt.keyCode);
+                return
+            }
+
+            $("#box1").append(evt.keyCode)
+        });
+        $(document).keyup(function (evt) {
+            if(evt.ctrlKey) {
+                alert(evt.keyCode);
+            }
+        });
+    })
+</script>
+</html>

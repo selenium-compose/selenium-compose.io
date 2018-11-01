@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attr test html</title>
+</head>
+<body>
+
+<input class="email" value="" />
+<input class="addr" value="" />
+
+<input class="name" value="My Name" />
+<input class="name" value="" />
+
+</body>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script>
+    setTimeout(function() {
+      $(".email").val("aram.petrosyan.88@gmail.com")
+    }, 5000)
+    setTimeout(function () {
+        $(".addr").val("12 burton grove")
+        $(".name").val("My Name")
+    }, 4000)
+
+</script>
+</html>

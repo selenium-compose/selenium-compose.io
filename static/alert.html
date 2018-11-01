@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alert test html</title>
+</head>
+<body>
+
+<script>
+    showAlert(0);
+    function showAlert(index) {
+        switch (index) {
+            case 0:
+                setTimeout(function () {
+                    alert("This is a simple Alert");
+                    showAlert(1)
+                }, 800);
+                break;
+            case 1:
+                setTimeout(function () {
+                    alert("This is again a simple Alert");
+                    showAlert(2)
+                }, 400);
+                break;
+            case 2:
+                setTimeout(function () {
+                    if (!confirm("This is a confirmation alert")) {
+                        alert("Not confirmed")
+                    }
+                    showAlert(3)
+                }, 1200);
+                break;
+            case 3:
+                setTimeout(function () {
+                    if (confirm("This is a confirmation alert")) {
+                        alert("Confirmed!")
+                    }
+                    showAlert(4)
+                }, 450);
+                break;
+            case 4:
+                setTimeout(function () {
+                    alert(prompt("This is a prompt alert", "Hello world!"));
+                    showAlert(5)
+                }, 450);
+                break;
+            case 5:
+                setTimeout(function () {
+                    alert(prompt("This is a prompt alert", "Hello world!"));
+                }, 2000);
+                break;
+        }
+    }
+</script>
+</body>
+</html>
